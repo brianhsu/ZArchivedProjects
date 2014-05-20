@@ -1,0 +1,1143 @@
+# MaidroidGTD Desktop
+#
+# Copyright (C) 2011 BrianHsu <brianhsu.hsu@gmail.com>
+# This file is distributed under the same license as the MaidroidGTD Descktop package.
+# Brian Hsu <brianhsu.hsu@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MaidroidGTD Desktop\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-15 14:32+0800\n"
+"PO-Revision-Date: 2011-06-15 14:33+0800\n"
+"Last-Translator: BrianHsu <brianhsu.hsu@gmail.com>\n"
+"Language-Team: BrianHsu <brianhsu.hsu@gmail.com>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: TAIWAN\n"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:43
+#: src/main/scala/Dialog/StuffDialog.scala:42
+msgid "Add stuff"
+msgstr "新增雜事"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:66
+#: src/main/scala/Dialog/ActionDialog.scala:87
+#: src/main/scala/Dialog/ReferenceDialog.scala:61
+#: src/main/scala/Dialog/MaybeDialog.scala:66
+#: src/main/scala/Dialog/StuffDialog.scala:64
+msgid "Ttile"
+msgstr "標題"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:66
+#: src/main/scala/Dialog/ProcessDialog.scala:476
+#: src/main/scala/Dialog/ProcessDialog.scala:672
+#: src/main/scala/Dialog/ActionDialog.scala:87
+#: src/main/scala/Dialog/ActionDialog.scala:108
+#: src/main/scala/Dialog/MaybeDialog.scala:66
+#: src/main/scala/Dialog/StuffDialog.scala:64
+msgid "Required"
+msgstr "必填欄位"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:67
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:79
+#: src/main/scala/GTDTabFolder/InboxTab.scala:62
+#: src/main/scala/GTDTabFolder/ActionTab.scala:52
+#: src/main/scala/GTDTabFolder/ActionTab.scala:67
+#: src/main/scala/GTDTabFolder/ActionTab.scala:82
+#: src/main/scala/GTDTabFolder/ActionTab.scala:97
+#: src/main/scala/GTDTabFolder/ActionTab.scala:112
+#: src/main/scala/Dialog/ProcessDialog.scala:673
+#: src/main/scala/PreferenceWindow.scala:86
+#: src/main/scala/Dialog/ActionDialog.scala:88
+#: src/main/scala/Dialog/ReferenceDialog.scala:62
+#: src/main/scala/Dialog/MaybeDialog.scala:67
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:58
+#: src/main/scala/Dialog/StuffDialog.scala:65
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:59
+msgid "Topic"
+msgstr "主題"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:68
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:79
+msgid "Vision"
+msgstr "願景"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:69
+#: src/main/scala/Dialog/ProcessDialog.scala:674
+#: src/main/scala/Dialog/ActionDialog.scala:93
+#: src/main/scala/Dialog/ActionDialog.scala:94
+#: src/main/scala/Dialog/ReferenceDialog.scala:63
+#: src/main/scala/Dialog/ReferenceDialog.scala:64
+#: src/main/scala/Dialog/MaybeDialog.scala:68
+#: src/main/scala/Dialog/MaybeDialog.scala:69
+#: src/main/scala/Dialog/StuffDialog.scala:66
+msgid "Description"
+msgstr "描述"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:73
+#: src/main/scala/Dialog/ProcessDialog.scala:106
+#: src/main/scala/Dialog/ProcessDialog.scala:160
+#: src/main/scala/Dialog/ProcessDialog.scala:231
+#: src/main/scala/Dialog/ProcessDialog.scala:316
+#: src/main/scala/Dialog/ProcessDialog.scala:394
+#: src/main/scala/Dialog/ProcessDialog.scala:488
+#: src/main/scala/Dialog/ProcessDialog.scala:592
+#: src/main/scala/Dialog/ActionDialog.scala:142
+#: src/main/scala/Dialog/ReferenceDialog.scala:67
+#: src/main/scala/Dialog/MaybeDialog.scala:74
+#: src/main/scala/Dialog/StuffDialog.scala:73
+msgid "Cancel"
+msgstr "取消"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:74
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:65
+#: src/main/scala/GTDTabFolder/InboxTab.scala:68
+#: src/main/scala/Dialog/StuffDialog.scala:75
+msgid "Add"
+msgstr "新增"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:158
+msgid "Edit Project"
+msgstr "修改專案"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:160
+#: src/main/scala/Dialog/ActionDialog.scala:143
+#: src/main/scala/Dialog/ReferenceDialog.scala:68
+#: src/main/scala/Dialog/MaybeDialog.scala:75
+#: src/main/scala/Dialog/StuffDialog.scala:166
+msgid "Edit"
+msgstr "修改"
+
+#: src/main/scala/MainWindow.scala:88
+msgid "GTDDesktop"
+msgstr "GTDDesktop"
+
+#: src/main/scala/MainWindow.scala:148
+msgid "Maidroid Loading..."
+msgstr "Maidroid 載入中……"
+
+#: src/main/scala/MainWindow.scala:223
+msgid "Show / Hide"
+msgstr "顯示 / 隱藏"
+
+#: src/main/scala/MainWindow.scala:228
+#: src/main/scala/PreferenceWindow.scala:120
+msgid "Preference"
+msgstr "偏好設定"
+
+#: src/main/scala/MainWindow.scala:233
+msgid "Exit"
+msgstr "離開"
+
+#: src/main/scala/MainWindow.scala:236
+msgid "MaidroidGTD"
+msgstr "MaidroidGTD"
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:40
+#: src/main/scala/GTDTabFolder/ActionTab.scala:52
+#: src/main/scala/GTDTabFolder/ActionTab.scala:67
+#: src/main/scala/GTDTabFolder/ActionTab.scala:82
+#: src/main/scala/GTDTabFolder/ActionTab.scala:97
+#: src/main/scala/GTDTabFolder/ActionTab.scala:112
+#: src/main/scala/Dialog/ActionDialog.scala:91
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:122
+msgid "Project"
+msgstr "專案"
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:66
+#: src/main/scala/GTDTabFolder/InboxTab.scala:69
+#: src/main/scala/GTDTabFolder/ActionTab.scala:130
+#: src/main/scala/PreferenceWindow.scala:78
+#: src/main/scala/PreferenceWindow.scala:90
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:65
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:65
+msgid "Remove"
+msgstr "移除"
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:67
+#: src/main/scala/GTDTabFolder/ActionTab.scala:131
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:66
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:66
+msgid "Reprocess"
+msgstr "重新處理"
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:73
+#: src/main/scala/GTDTabFolder/InboxTab.scala:77
+#: src/main/scala/GTDTabFolder/ActionTab.scala:137
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:71
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:71
+msgid "Search"
+msgstr "搜尋"
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:79
+#: src/main/scala/GTDTabFolder/InboxTab.scala:62
+#: src/main/scala/GTDTabFolder/ActionTab.scala:52
+#: src/main/scala/GTDTabFolder/ActionTab.scala:68
+#: src/main/scala/GTDTabFolder/ActionTab.scala:83
+#: src/main/scala/GTDTabFolder/ActionTab.scala:98
+#: src/main/scala/GTDTabFolder/ActionTab.scala:113
+#: src/main/scala/Dialog/ProcessDialog.scala:672
+#: src/main/scala/PreferenceWindow.scala:76
+#: src/main/scala/PreferenceWindow.scala:88
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:58
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:59
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:170
+msgid "Title"
+msgstr "標題"
+
+#: src/main/scala/GTDTabFolder/InboxTab.scala:40
+msgid "Inbox"
+msgstr "收件匣"
+
+#: src/main/scala/GTDTabFolder/InboxTab.scala:70
+msgid "Process"
+msgstr "處理"
+
+#: src/main/scala/GTDTabFolder/InboxTab.scala:71
+msgid "Receive Mail"
+msgstr "收取信件"
+
+#: src/main/scala/GTDTabFolder/InboxTab.scala:202
+#, c-format
+msgid "[Tickle %s] %s"
+msgstr "[提醒 %s] %s"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:43
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:93
+msgid "Action"
+msgstr "下一步行動"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:48
+msgid "All"
+msgstr "全部"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:51
+#: src/main/scala/GTDTabFolder/ActionTab.scala:66
+#: src/main/scala/GTDTabFolder/ActionTab.scala:81
+#: src/main/scala/GTDTabFolder/ActionTab.scala:96
+#: src/main/scala/GTDTabFolder/ActionTab.scala:108
+#: src/main/scala/GTDTabFolder/ActionTab.scala:111
+#: src/main/scala/Dialog/ProcessDialog.scala:387
+#: src/main/scala/Dialog/ProcessDialog.scala:480
+#: src/main/scala/Dialog/ProcessDialog.scala:584
+msgid "Done"
+msgstr "完成"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:51
+#: src/main/scala/GTDTabFolder/ActionTab.scala:66
+#: src/main/scala/GTDTabFolder/ActionTab.scala:81
+#: src/main/scala/GTDTabFolder/ActionTab.scala:96
+#: src/main/scala/GTDTabFolder/ActionTab.scala:111
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:58
+msgid "Create Date"
+msgstr "建立日期"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:52
+#: src/main/scala/GTDTabFolder/ActionTab.scala:67
+#: src/main/scala/GTDTabFolder/ActionTab.scala:82
+#: src/main/scala/GTDTabFolder/ActionTab.scala:97
+#: src/main/scala/GTDTabFolder/ActionTab.scala:112
+#: src/main/scala/PreferenceWindow.scala:74
+#: src/main/scala/Dialog/ActionDialog.scala:89
+msgid "Context"
+msgstr "情境"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:53
+#: src/main/scala/GTDTabFolder/ActionTab.scala:83
+msgid "Delegated To"
+msgstr "受委派人"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:53
+#: src/main/scala/GTDTabFolder/ActionTab.scala:98
+msgid "Scheduled Date"
+msgstr "排程日期"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:63
+#: src/main/scala/Dialog/ProcessDialog.scala:151
+#: src/main/scala/Dialog/ActionDialog.scala:151
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:126
+msgid "Do ASAP"
+msgstr "儘速完成"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:78
+#: src/main/scala/Dialog/ProcessDialog.scala:152
+#: src/main/scala/Dialog/ActionDialog.scala:152
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:130
+msgid "Delegated"
+msgstr "委派"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:83
+msgid "Follow up"
+msgstr "跟進"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:93
+#: src/main/scala/Dialog/ProcessDialog.scala:153
+#: src/main/scala/Dialog/ActionDialog.scala:153
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:134
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:170
+msgid "Scheduled"
+msgstr "已排程"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:132
+msgid "Mail"
+msgstr "寫信"
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:133
+#: src/main/scala/Dialog/ActionDialog.scala:111
+msgid "Follow Up"
+msgstr "跟進"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:98
+msgid "Yes, it is actionable"
+msgstr "這是可以有具體行動的事項"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:99
+msgid "No, it is not actionable"
+msgstr "這件事無法成為具體的行動"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:103
+#: src/main/scala/Dialog/ProcessDialog.scala:157
+#: src/main/scala/Dialog/ProcessDialog.scala:228
+#: src/main/scala/Dialog/ProcessDialog.scala:313
+#: src/main/scala/Dialog/ProcessDialog.scala:391
+#: src/main/scala/Dialog/ProcessDialog.scala:485
+#: src/main/scala/Dialog/ProcessDialog.scala:589
+msgid "Prev"
+msgstr "上一步"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:104
+#: src/main/scala/Dialog/ProcessDialog.scala:158
+#: src/main/scala/Dialog/ProcessDialog.scala:229
+#: src/main/scala/Dialog/ProcessDialog.scala:314
+#: src/main/scala/Dialog/ProcessDialog.scala:392
+#: src/main/scala/Dialog/ProcessDialog.scala:486
+#: src/main/scala/Dialog/ProcessDialog.scala:590
+msgid "Next"
+msgstr "下一步"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:105
+#: src/main/scala/Dialog/ProcessDialog.scala:159
+#: src/main/scala/Dialog/ProcessDialog.scala:230
+#: src/main/scala/Dialog/ProcessDialog.scala:315
+#: src/main/scala/Dialog/ProcessDialog.scala:393
+#: src/main/scala/Dialog/ProcessDialog.scala:487
+#: src/main/scala/Dialog/ProcessDialog.scala:591
+msgid "Finish"
+msgstr "完成"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:149
+msgid "Expected Successful outcome:"
+msgstr "預期的結果"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:218
+msgid "Delete"
+msgstr "刪除"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:223
+msgid "Someday / Maybe"
+msgstr "或許 / 有一天"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:224
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:39
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:113
+msgid "Reference"
+msgstr "參考資料"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:300
+#: src/main/scala/Dialog/MaybeDialog.scala:70
+msgid "Tickle me at"
+msgstr "提醒我："
+
+#: src/main/scala/Dialog/ProcessDialog.scala:385
+#: src/main/scala/Dialog/ProcessDialog.scala:478
+#: src/main/scala/Dialog/ProcessDialog.scala:577
+msgid "Context:"
+msgstr "情境："
+
+#: src/main/scala/Dialog/ProcessDialog.scala:386
+#: src/main/scala/Dialog/ProcessDialog.scala:479
+#: src/main/scala/Dialog/ProcessDialog.scala:578
+msgid "Project:"
+msgstr "專案："
+
+#: src/main/scala/Dialog/ProcessDialog.scala:476
+msgid "Delegated:"
+msgstr "委派給："
+
+#: src/main/scala/Dialog/ProcessDialog.scala:477
+msgid "Email:"
+msgstr "電子郵件："
+
+#: src/main/scala/Dialog/ProcessDialog.scala:579
+msgid "Date:"
+msgstr "日期："
+
+#: src/main/scala/Dialog/ProcessDialog.scala:581
+msgid "Duration:"
+msgstr "為期："
+
+#: src/main/scala/Dialog/ProcessDialog.scala:582
+msgid "Location:"
+msgstr "地點："
+
+#: src/main/scala/Dialog/ProcessDialog.scala:669
+msgid "Process Stuff"
+msgstr "處理雜事"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:671
+msgid "Info"
+msgstr "基本資訊"
+
+#: src/main/scala/Dialog/ProcessDialog.scala:675
+#: src/main/scala/Dialog/StuffDialog.scala:68
+msgid "Stuff Description"
+msgstr "描述"
+
+#: src/main/scala/Maid/UI.scala:176
+msgid "Show/Hide"
+msgstr "顯示 / 隱藏"
+
+#: src/main/scala/PreferenceWindow.scala:44
+msgid "Username:"
+msgstr "使用者名稱："
+
+#: src/main/scala/PreferenceWindow.scala:45
+msgid "Password:"
+msgstr "密碼："
+
+#: src/main/scala/PreferenceWindow.scala:46
+msgid "POP3 Server:"
+msgstr "POP3 伺服器："
+
+#: src/main/scala/PreferenceWindow.scala:47
+msgid "Port:"
+msgstr "連接埠："
+
+#: src/main/scala/PreferenceWindow.scala:48
+msgid "Use SSL Connection"
+msgstr "使用 SSL 連線"
+
+#: src/main/scala/PreferenceWindow.scala:49
+msgid "Check mail at every "
+msgstr "每隔下列的時間檢查信箱："
+
+#: src/main/scala/PreferenceWindow.scala:51
+msgid "Check mail at start"
+msgstr "在啟動時自信箱收件"
+
+#: src/main/scala/PreferenceWindow.scala:55
+msgid "Command:"
+msgstr "執行指令："
+
+#: src/main/scala/PreferenceWindow.scala:61
+msgid "Mail Server"
+msgstr "電子郵件伺服器"
+
+#: src/main/scala/PreferenceWindow.scala:65
+msgid "Mail Client"
+msgstr "電子郵件程式"
+
+#: src/main/scala/PreferenceWindow.scala:126
+msgid "OK"
+msgstr "確定"
+
+#: src/main/scala/PreferenceWindow.scala:127
+msgid "Close"
+msgstr "關閉"
+
+#: src/main/scala/POP3Receiver.scala:151
+msgid "POP3 Mail server is not configured correctly"
+msgstr "POP3 郵件伺設定有誤。"
+
+#: src/main/scala/POP3Receiver.scala:186
+msgid "==> Start receive mail"
+msgstr "==> 開始收信"
+
+#: src/main/scala/POP3Receiver.scala:200
+msgid "==> received mail:"
+msgstr "==> 收到信件："
+
+#: src/main/scala/POP3Receiver.scala:203
+msgid "==> Done"
+msgstr "==> 收信結束"
+
+#: src/main/scala/Dialog/ActionDialog.scala:43
+msgid "Edit Action"
+msgstr "修改下一步行動"
+
+#: src/main/scala/Dialog/ActionDialog.scala:95
+msgid "Type"
+msgstr "類型"
+
+#: src/main/scala/Dialog/ActionDialog.scala:96
+msgid "Successful Outcome"
+msgstr "期望成果"
+
+#: src/main/scala/Dialog/ActionDialog.scala:107
+msgid "Deleaged To"
+msgstr "委派給"
+
+#: src/main/scala/Dialog/ActionDialog.scala:109
+msgid "EMail"
+msgstr "電子郵件"
+
+#: src/main/scala/Dialog/ActionDialog.scala:116
+msgid "Date/Time"
+msgstr "日期時間"
+
+#: src/main/scala/Dialog/ActionDialog.scala:127
+msgid "Duration"
+msgstr "為期"
+
+#: src/main/scala/Dialog/ActionDialog.scala:132
+msgid "minutes"
+msgstr "分鐘"
+
+#: src/main/scala/Dialog/ActionDialog.scala:133
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:170
+msgid "Location"
+msgstr "地點"
+
+#: src/main/scala/Dialog/ReferenceDialog.scala:39
+msgid "Edit Reference"
+msgstr "修改參考資料"
+
+#: src/main/scala/Dialog/ReferenceDialog.scala:61
+msgid "Stuff Title"
+msgstr "標題"
+
+#: src/main/scala/Dialog/MaybeDialog.scala:41
+msgid "Edit Maybe"
+msgstr "修改或許/有一天事項"
+
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:39
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:107
+msgid "Maybe"
+msgstr "或許 / 有一天"
+
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:59
+msgid "Tickle Date"
+msgstr "提醒日期"
+
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:87
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:101
+msgid "None"
+msgstr "無"
+
+#: src/main/scala/Maid/Model.scala:54
+msgid "Here's the overview the master's work and some tips about GTD."
+msgstr "這裡是主人近期的工作總覽，以及 GTD 的要點整理喲。"
+
+#: src/main/scala/Maid/Model.scala:55
+msgid "If master feels hard to make your mind about something, you could switch back to this page and think about it again."
+msgstr "如果主人覺得事情難以決擇，不妨回到這一頁，再重新思考一下，或許會有靈感呢。"
+
+#: src/main/scala/Maid/Model.scala:60
+#, c-format
+msgid "There are about %d items that master have not decide how to handle it."
+msgstr "在這裡列出的是主人還沒決定處理的雜事，目前還有 %d 件呢。"
+
+#: src/main/scala/Maid/Model.scala:61
+msgid "I think it is great if master could find sometime and make descision about these item."
+msgstr "主人不妨找個空閒的時間，來決定這些事要如何處理。"
+
+#: src/main/scala/Maid/Model.scala:62
+msgid "If there is anything that need to be noted, please click the plus button on the tool bar."
+msgstr "如果主人有其他的事情需要記錄，請儘管按工具列上的加號吩咐我喲！"
+
+#: src/main/scala/Maid/Model.scala:67
+msgid "Master, here is the stuff that is actionable or already done."
+msgstr "這裡是主人目前可以進行或已完成的工作喲！"
+
+#: src/main/scala/Maid/Model.scala:68
+msgid "Working hard is good, but please take care of yourself, my master."
+msgstr "雖然認真工作是很好，但主人也別忘記注意自己的身體狀況喲。"
+
+#: src/main/scala/Maid/Model.scala:69
+msgid "I will be sad if master is sick beacuse of hard working."
+msgstr "要是因為太過認真而病倒就不好了呢。"
+
+#: src/main/scala/Maid/Model.scala:74
+msgid "Here is things that master does not make up your mind yet."
+msgstr "放在這邊的，都是主人還沒下定決心是不是要去做的事呢。"
+
+#: src/main/scala/Maid/Model.scala:75
+msgid "It is really hard to make a decision sometimes, but I think master should review these thing if you have time."
+msgstr "雖然有些事情真的很難決定到底要不要做，但托到最後一刻好像也不太好的說……"
+
+#: src/main/scala/Maid/Model.scala:76
+msgid "So...sorry! I should not criticize master..."
+msgstr "對、對不起主人，我太多嘴了！"
+
+#: src/main/scala/Maid/Model.scala:81
+msgid "Does master want to get some reference file?"
+msgstr "咦？！主人想要找以前留下來的參考資料嗎？"
+
+#: src/main/scala/Maid/Model.scala:82
+msgid "Master could tell me what you need to find, I will search it for master."
+msgstr "如果不介意的話，主人可以直接告訴妺斗主人想找什麼東西喲。"
+
+#: src/main/scala/Maid/Model.scala:83
+msgid "Because I'm more familiar with how reference is filed than master."
+msgstr "因為我比主人還要熟悉參考資料放置的規則嘛！"
+
+#: src/main/scala/Maid/Model.scala:88
+msgid "Here is the project master currently has..."
+msgstr "主人正在進行的專案都放在這裡呢……"
+
+#: src/main/scala/Maid/Model.scala:89
+msgid "Just for your information, master could drag and drop the actions to rearrange the project of actions."
+msgstr "提醒主人，如果主人發現專案分類有問題的話，可以直接用托拉的方式更改工作所屬的專案喲。"
+
+#: src/main/scala/Maid/Model.scala:95
+#: src/main/scala/Maid/Model.scala:101
+msgid "Yes, may I help you?"
+msgstr "噫！是的，請問主人有什麼吩咐呢？"
+
+#: src/main/scala/Maid/Model.scala:99
+msgid "りなさいませ、ご主人さま。Master could click the dialog to continue."
+msgstr "りなさいませ、ご主人さま。提醒主人，點擊對話框可以繼續對話喲！"
+
+#: src/main/scala/Maid/Model.scala:100
+msgid "If master wish me to do something, please click on me."
+msgstr "另外如果主人有什麼吩附的話，輕輕點一下妺斗就可以囉。"
+
+#: src/main/scala/Maid/Model.scala:106
+msgid "Master, I could not retrieve the mail from server..."
+msgstr "主人，好像沒辦法從信箱收信耶……"
+
+#: src/main/scala/Maid/Model.scala:107
+msgid "Here is the problem:\n"
+msgstr "好像是因為下面的問題的關係：\n"
+
+#: src/main/scala/Maid/Model.scala:112
+msgid "Does master want to edit this action? Please feel free to tell me."
+msgstr "主人想要更改這個項目嗎？請儘管吩咐喲！"
+
+#: src/main/scala/Maid/Model.scala:113
+msgid "Cancel it? OK, I got it."
+msgstr "主人想要取消是嗎？我知道了。"
+
+#: src/main/scala/Maid/Model.scala:114
+msgid "OK, it is updated!"
+msgstr "好的，已經幫主人更新囉！"
+
+#: src/main/scala/Maid/Model.scala:120
+msgid "OK, when should I put this item back into Inbox, My master?"
+msgstr "是的，請問什麼時候需要替主人將這件事放回收件匣呢？"
+
+#: src/main/scala/Maid/Model.scala:124
+msgid "There is no need to remind master about this item? OK, I got it."
+msgstr "耶？！不需要提醒主人這件事嗎？"
+
+#: src/main/scala/Maid/Model.scala:125
+msgid "Does master want to edit this item? I got it."
+msgstr "主人想要更改這個項目嗎？請儘管吩咐喲！"
+
+#: src/main/scala/Maid/Model.scala:126
+msgid "Master want to remain this item? OK, as your wish."
+msgstr "主人想要要維持原樣是嗎？我知道了！"
+
+#: src/main/scala/Maid/Model.scala:128
+msgid "It is already updated..."
+msgstr "已經替主人更新好囉……"
+
+#: src/main/scala/Maid/Model.scala:129
+msgid "Master could check it again."
+msgstr "主人可以重新檢視列表的資料來確認喲。"
+
+#: src/main/scala/Maid/Model.scala:136
+#, c-format
+msgid "My master does '%s' could be achieved by some real action?"
+msgstr "請問主人，【%s】這件事是不是能夠透過某些具體的行動來解決呢？"
+
+#: src/main/scala/Maid/Model.scala:137
+msgid "If it is actionable, could be delegated to someone else or is already scheduled, please select 'It is Actionable'"
+msgstr "如果這件事可以立刻行動、委派給他人，或是已經確定時間的約會，請主人選擇『這是可以有具體行動的事項』的選項。"
+
+#: src/main/scala/Maid/Model.scala:138
+msgid "If this item could not take a action, please select 'It is not actionable'."
+msgstr "要是這件事沒有具體的相關行動，那請選擇『這件事無法成為具體的行動』喲！"
+
+#: src/main/scala/Maid/Model.scala:143
+msgid "Excuse me, what is the expected outcome of this item? And what to do next, my master?"
+msgstr "那麼……請問主人這件事預其的成果是什麼？還有接下來要怎麼處理比較好呢？"
+
+#: src/main/scala/Maid/Model.scala:144
+msgid "Just for your information, you could also delegeted this item to someone else."
+msgstr "提醒主人，事情也不一定要全部自己覽下來，請把適合的事情委派給適合的人選喲！"
+
+#: src/main/scala/Maid/Model.scala:145
+msgid "If this is a appointment, please selected 'Scheduled'"
+msgstr "如果這件事是已經確定特定時間的約會等等，請選擇『已排定時程』這項。"
+
+#: src/main/scala/Maid/Model.scala:150
+msgid "This item is not actionable? OK, I got it."
+msgstr "這件事無法採取特定的行動是嗎？"
+
+#: src/main/scala/Maid/Model.scala:151
+msgid "Please tell me should I delete it or keep it as reference."
+msgstr "那麻煩請主人選擇是否要刪除或是保留為參考資料喲。"
+
+#: src/main/scala/Maid/Model.scala:152
+msgid "If this item could become an action later, please select 'Someday/Maybe'."
+msgstr "如果這件事以後可能會採取行動，請選擇『也許/某一天』，讓我幫主人記著，以便日後回顧並提醒主人喲。"
+
+#: src/main/scala/Maid/Model.scala:157
+msgid "If master want me to remind you about this item later, please free to tell me."
+msgstr "如果需要在日後提醒主人重新決定如何處這件事，請不要客氣，儘管吩咐喲！"
+
+#: src/main/scala/Maid/Model.scala:158
+msgid "Just check the 'Tickle me' box, and set the date, I will put this item back into Inbox when the date is arrived."
+msgstr "只要將『提醒我』的框框打勾，並設定要提醒的時間，這樣等時間到了我就會幫主人再次把這件事放入收件匣喲。"
+
+#: src/main/scala/Maid/Model.scala:163
+msgid "Master, if this action could be done in two minutes, it is better to do it right now."
+msgstr "提醒主人，如果這件事可以在兩分鐘內搞定，最好現在就去做喲！"
+
+#: src/main/scala/Maid/Model.scala:164
+msgid "If this action could not be done in two minutes, you could defer it."
+msgstr "如果這件事沒辦法在兩分鐘內完成，主人也可以先決定這件事適合在什麼情境下執行。"
+
+#: src/main/scala/Maid/Model.scala:169
+msgid "Please tell me who to delegate this action."
+msgstr "有適當的人選可以做這件事嗎？那請主人告訴我這件事交給誰做囉。"
+
+#: src/main/scala/Maid/Model.scala:170
+msgid "Master, please rember that delegated action need to follow up."
+msgstr "這樣才有辦法做後續的追蹤，畢竟『跟進』也是很重要的一環喲！"
+
+#: src/main/scala/Maid/Model.scala:175
+msgid "This item has been scheduled?"
+msgstr "耶？！這件事已經確定時間了嗎？"
+
+#: src/main/scala/Maid/Model.scala:176
+msgid "Please tell me specific date time, I would remind you when the time is arrived, my master."
+msgstr "那麻煩請主人告訴我詳細的時間，以便時間到了提醒主人喲！"
+
+#: src/main/scala/Maid/Model.scala:183
+msgid "Need to update this reference?"
+msgstr "這個參考資料需要更新是嗎？"
+
+#: src/main/scala/Maid/Model.scala:184
+msgid "Please feel free to tell me."
+msgstr "請主人儘管吩咐喲！"
+
+#: src/main/scala/Maid/Model.scala:188
+msgid "OK, I've updated content of this reference."
+msgstr "好的，已經幫主人把新的資料記下來囉。"
+
+#: src/main/scala/Maid/Model.scala:189
+msgid "Master want to keep the origin version? I got it."
+msgstr "主人想要維持原樣嗎？好的，我知道了。"
+
+#: src/main/scala/Maid/Model.scala:194
+msgid "Vision means the final goal of this project."
+msgstr "『願景』指的是這個專案最終的理想目標喲。"
+
+#: src/main/scala/Maid/Model.scala:195
+msgid "Because there is a vision, so we could know what to looking after!"
+msgstr "因為有了最終的理想目標，才有前進的方向嘛！"
+
+#: src/main/scala/Maid/Model.scala:199
+msgid "Does master wish to cancel it? OK, I will do that for you."
+msgstr "主人要取消是嗎？好的，我知道了……"
+
+#: src/main/scala/Maid/Model.scala:201
+msgid "Ahh... Please tell me what project master want to add."
+msgstr "是的，請問主人要新增什麼樣的專案呢？"
+
+#: src/main/scala/Maid/Model.scala:202
+msgid "Project is used to keep track a group of action."
+msgstr "所謂的專案，是用來管理需要多個行動才能完成的事情用的喲！"
+
+#: src/main/scala/Maid/Model.scala:203
+msgid "You could assign actions to project, and track the status of actions under it."
+msgstr "透過專案的分類，可以讓主人更容易追蹤各種事情呢。"
+
+#: src/main/scala/Maid/Model.scala:208
+msgid "Is this project need to be updated?"
+msgstr "請問主人這個專案需要更新是嗎？"
+
+#: src/main/scala/Maid/Model.scala:209
+msgid "If master have any request, please feel free to tell me."
+msgstr "有任何需求，都請主人儘量吩咐喲！"
+
+#: src/main/scala/Maid/Model.scala:214
+#, c-format
+msgid "Master, I've already add '%s' to the project list."
+msgstr "是，是的！已經幫主人把【%s】這項專案記下來囉。"
+
+#: src/main/scala/Maid/Model.scala:215
+msgid "You may assign the corresponding project when adding "
+msgstr "將來主人可以在新增行動的時候，直接指定其所屬的專案喲。"
+
+#: src/main/scala/Maid/Model.scala:220
+msgid "I've already updated this project for you. Master could check it out in the list."
+msgstr "已經幫主人更新這個專案囉，如果主人需要，可以至列表中確認喲！"
+
+#: src/main/scala/Maid/Model.scala:227
+msgid "My master, this field is required. So we could know what it is."
+msgstr "主人，這個欄位是必要的喲，這樣以後才知道到底是什麼事嘛。"
+
+#: src/main/scala/Maid/Model.scala:228
+msgid "If there is any request, please feel free to tell me."
+msgstr "請不要客氣，儘管吩咐我喲。"
+
+#: src/main/scala/Maid/Model.scala:233
+msgid "Master, what topic does this item belong?"
+msgstr "請問這件事是屬於哪個主題呢？"
+
+#: src/main/scala/Maid/Model.scala:234
+msgid "If there is no apporitate topic in the list, you could enter new topic directly."
+msgstr "如果主人發現這件事所屬的主題不在列表中，也可以直接輸入喲！"
+
+#: src/main/scala/Maid/Model.scala:239
+msgid "If there is something need to be noted, please tell me using this field."
+msgstr "如果主人有其他關於這件事的備註，可以在這邊告訴我喲。"
+
+#: src/main/scala/Maid/Model.scala:243
+msgid "OK, I've remembered this item, my master."
+msgstr "已經幫主人將這件事記下了來。"
+
+#: src/main/scala/Maid/Model.scala:244
+msgid "Please remember to determine what to do about this item if you have time, my master."
+msgstr "請主人要找個時間來決定如何處理這些事喲！"
+
+#: src/main/scala/Maid/Model.scala:249
+msgid "OK, I got it."
+msgstr "好的，我知道了。"
+
+#: src/main/scala/Maid/Model.scala:250
+msgid "If master have any other request, please feel free to tell me."
+msgstr "如果主人還有有其他吩咐，請不要客氣，隨時告訴我喲。"
+
+#: src/main/scala/Maid/Model.scala:254
+msgid "I've updated the status of this item, my master."
+msgstr "已經幫主人更新這件事的狀態囉。"
+
+#: src/main/scala/Maid/Model.scala:262
+#: src/main/scala/Maid/Model.scala:357
+#: src/main/scala/Maid/Model.scala:385
+#: src/main/scala/Maid/Model.scala:453
+#: src/main/scala/Maid/Model.scala:492
+msgid "It seems there is no notes..."
+msgstr "好像沒什麼特別的備忘呢。"
+
+#: src/main/scala/Maid/Model.scala:266
+#, c-format
+msgid "Master, '%s' should be done as soon as possible."
+msgstr "主人，【%s】這件事應該要儘快找時間去做喲！"
+
+#: src/main/scala/Maid/Model.scala:267
+msgid ""
+"Here is the description:\n"
+"\n"
+msgstr ""
+"至於這件事的備望如下：\n"
+"\n"
+
+#: src/main/scala/Maid/Model.scala:272
+msgid "Excuse me, my master"
+msgstr "主人……不好意思打擾了。"
+
+#: src/main/scala/Maid/Model.scala:273
+msgid "I could not start mail client, is the setting correct?"
+msgstr "沒辦法開啟電子郵件軟體呢，會不會是設定有問題呢？"
+
+#: src/main/scala/Maid/Model.scala:278
+msgid "It seems master does not set EMail client yet..."
+msgstr "看起來主人好像還沒設定要使用的電子郵件軟體呢……"
+
+#: src/main/scala/Maid/Model.scala:279
+msgid "Master could set it in Preference window."
+msgstr "主人可以在『偏好設定』的視窗中設定要使用什麼軟體來寫信喲！"
+
+#: src/main/scala/Maid/Model.scala:286
+#, c-format
+msgid "My master, action '%s' has been delegated to %s."
+msgstr "主人，【%s】這件事已經交給【%s】去做囉！"
+
+#: src/main/scala/Maid/Model.scala:287
+#, c-format
+msgid ""
+"Delegated:%s\n"
+"E-Mail:%s\n"
+"Description:\n"
+"\n"
+"%s"
+msgstr ""
+"交付對象：%s\n"
+"電子郵件：%s\n"
+"備忘：\n"
+"\n"
+"%s"
+
+#: src/main/scala/Maid/Model.scala:297
+#: src/main/scala/Maid/Model.scala:417
+#, c-format
+msgid "Master, action '%s' has been scheduled at %s, please don't forget."
+msgstr "主人，【%s】這件事是定在 %s，請主人不要望記囉！"
+
+#: src/main/scala/Maid/Model.scala:298
+#: src/main/scala/Maid/Model.scala:418
+#, c-format
+msgid ""
+"Location:%s\n"
+"Description:\n"
+"%s"
+msgstr ""
+"地點：%s\n"
+"備忘：\n"
+"%s"
+
+#: src/main/scala/Maid/Model.scala:303
+#: src/main/scala/Maid/Model.scala:442
+msgid "This action has been done? OK, I will mark it as done."
+msgstr "這件事已經完成了嗎？那我幫主人標記上已完成的記號喲！"
+
+#: src/main/scala/Maid/Model.scala:304
+msgid "Master could be the 'Done' tab to check it out."
+msgstr "主人可以到『已完成』的標籤頁來確認已完成的事項喔。"
+
+#: src/main/scala/Maid/Model.scala:309
+msgid "Does master want to delete this action?"
+msgstr "耶？主人要刪除這項行動嗎？"
+
+#: src/main/scala/Maid/Model.scala:310
+msgid "OK, it has been deleted."
+msgstr "好的，已經幫主人刪除了喲！"
+
+#: src/main/scala/Maid/Model.scala:315
+#: src/main/scala/Maid/Model.scala:398
+#: src/main/scala/Maid/Model.scala:472
+#: src/main/scala/Maid/Model.scala:506
+#, c-format
+msgid "Does master want to reprocess '%s'?"
+msgstr "主人要重新檢討【%s】嗎？"
+
+#: src/main/scala/Maid/Model.scala:316
+#: src/main/scala/Maid/Model.scala:399
+#: src/main/scala/Maid/Model.scala:473
+#: src/main/scala/Maid/Model.scala:507
+msgid "As your wish, I will put it into inbox, master could process it later."
+msgstr "那我幫主人把這件事重新放到收件匣中了喲！"
+
+#: src/main/scala/Maid/Model.scala:321
+#: src/main/scala/Maid/Model.scala:444
+msgid "This action need to mark as not done again?"
+msgstr "咦？！這件事要重新標成尚末完成是嗎？"
+
+#: src/main/scala/Maid/Model.scala:322
+#: src/main/scala/Maid/Model.scala:445
+msgid "OK, I got it. If there is any request, please feel free to tell me."
+msgstr "我知道了，如果主人還有其他需求，請儘量吩咐喲！"
+
+#: src/main/scala/Maid/Model.scala:328
+#: src/main/scala/Maid/Model.scala:367
+#: src/main/scala/Maid/Model.scala:405
+#: src/main/scala/Maid/Model.scala:479
+#: src/main/scala/Maid/Model.scala:513
+msgid "Are you searching for this? If not, please hit enter to show next item that is matched."
+msgstr "請問主人是要找這一項嗎？！如果不是的話，可以在搜尋框按 Enter 鍵繼續往下找喲！"
+
+#: src/main/scala/Maid/Model.scala:331
+#: src/main/scala/Maid/Model.scala:370
+#: src/main/scala/Maid/Model.scala:408
+#: src/main/scala/Maid/Model.scala:482
+#: src/main/scala/Maid/Model.scala:516
+msgid "Master, excuse me, it seems there is no matched item..."
+msgstr "主人，對不起，好像沒有符合這個條件的資料呢……"
+
+#: src/main/scala/Maid/Model.scala:334
+msgid "Master want mail to the delegated person? Please wait a minute..."
+msgstr "主人要連絡負責這件事的人嗎？請稍候喲……"
+
+#: src/main/scala/Maid/Model.scala:335
+msgid "Exceuse me, my master...It seems there is no e-mail address."
+msgstr "主人……對不起，好像找不到負責這件事的人的 EMail 耶。"
+
+#: src/main/scala/Maid/Model.scala:337
+msgid "OK, I've updated the follow-up time."
+msgstr "好的，已經幫主人將這件事的跟進時間設成現在囉！"
+
+#: src/main/scala/Maid/Model.scala:338
+msgid "Please remember keep track of this item until it is done."
+msgstr "請主人記得要持續追蹤這件事情直到完成喲。"
+
+#: src/main/scala/Maid/Model.scala:342
+msgid "Excuse me, my master."
+msgstr "主人……不好意思打擾了。"
+
+#: src/main/scala/Maid/Model.scala:343
+msgid "You could only set follow-up time for delegated item."
+msgstr "只有委派給其他人的事情才能標記跟進時間呢……"
+
+#: src/main/scala/Maid/Model.scala:351
+#, c-format
+msgid "I've deleted '%s', my master."
+msgstr "已經幫主人刪除【%s】囉！"
+
+#: src/main/scala/Maid/Model.scala:356
+#: src/main/scala/Maid/Model.scala:384
+#: src/main/scala/Maid/Model.scala:452
+#: src/main/scala/Maid/Model.scala:491
+msgid ""
+"Master said:\n"
+"\n"
+msgstr ""
+"主人那時是說：\n"
+"\n"
+
+#: src/main/scala/Maid/Model.scala:360
+#, c-format
+msgid "About '%s'? Please wait a minute..."
+msgstr "主人是說【%s】這件事嗎？我看一下喲……"
+
+#: src/main/scala/Maid/Model.scala:374
+msgid "Master want to check mail box? OK, I got it."
+msgstr "主人想要檢查信箱是嗎？好的，我知道了。"
+
+#: src/main/scala/Maid/Model.scala:375
+msgid "I will put the mail into inbox when it is ready, master could do something else when I process these mails."
+msgstr "對了，因為收信需要一點時間，主人可以先處理其他事情，我會直接幫主人把信件整>理好後放在收件匣中喲。"
+
+#: src/main/scala/Maid/Model.scala:388
+#: src/main/scala/Maid/Model.scala:456
+#: src/main/scala/Maid/Model.scala:495
+#, c-format
+msgid "About '%s'? Let me see..."
+msgstr "主人是說關於【%s】的事嗎？"
+
+#: src/main/scala/Maid/Model.scala:394
+#, c-format
+msgid "OK, I've deleted '%s' for you, my master."
+msgstr "好的，已經幫主人刪除【%s】了喲！"
+
+#: src/main/scala/Maid/Model.scala:426
+#, c-format
+msgid "OK, I've add action '%s' into project '%s'."
+msgstr "好的，已經幫主人重新把【%s】這件事分類到【%s】這個計畫中囉。"
+
+#: src/main/scala/Maid/Model.scala:427
+msgid "Is there any request?"
+msgstr "請問主人還有其他吩咐嗎？"
+
+#: src/main/scala/Maid/Model.scala:432
+msgid "OK, I've mark this project as done. My master."
+msgstr "好的，我幫主人把這個專案標記成『已完成』囉。"
+
+#: src/main/scala/Maid/Model.scala:433
+msgid "Just for your information, if master add action not has been done into this project, this project will automatically mark as not done again."
+msgstr "提醒主人，如果日後把尚未完成的行動事項加進來的話，這個專案會自動被標示成尚未完成喲！"
+
+#: src/main/scala/Maid/Model.scala:436
+msgid "OK, this project has been mark as not done again."
+msgstr "好的，已經幫主人把專案恢復成尚未完成的狀態了。"
+
+#: src/main/scala/Maid/Model.scala:438
+msgid "Master, you need finish all actions in the project first."
+msgstr "主人……要把專案底下的行動事項都完成，才算完成了這個專案喲。"
+
+#: src/main/scala/Maid/Model.scala:439
+msgid "If actions in the project is not mark as done, this check box will not work."
+msgstr "如果專案底下的事情沒做完，這個勾勾是不能用的呢。"
+
+#: src/main/scala/Maid/Model.scala:465
+#, c-format
+msgid "About project '%s'? Let me see..."
+msgstr "主人是說關於【%s】這個專案嗎？我看一下喲……"
+
+#: src/main/scala/Maid/Model.scala:466
+#, c-format
+msgid ""
+"Vision:%s\n"
+"Description:\n"
+"%s"
+msgstr ""
+"願景：%s\n"
+"備忘：\n"
+"%s"
+
+#: src/main/scala/Maid/Model.scala:470
+msgid "OK, I've deleted it!"
+msgstr "好的，已經幫主人刪除了喲！"
+
+#: src/main/scala/Maid/Model.scala:501
+#, c-format
+msgid "OK, I've delete '%s'."
+msgstr "好的，已經幫主人刪除【%s】了喲！"
+
+#: src/main/scala/Dialog/StuffDialog.scala:164
+msgid "Edit Stuff"
+msgstr "修改雜事"
+
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:59
+msgid "Date"
+msgstr "日期"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:42
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:152
+msgid "Overview"
+msgstr "總覽"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:84
+msgid "Collect all stuff into inbox"
+msgstr "將所有的雜事收集到收件匣中"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:100
+msgid "What is it? Is it actionable?"
+msgstr "這是什麼？可以採取行動嗎？"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:145
+msgid "GTD Process"
+msgstr "GTD 流程"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:146
+msgid "1. Collect"
+msgstr "1. 收集"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:147
+msgid "2. Process"
+msgstr "2. 處理"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:148
+msgid "3. Review"
+msgstr "3. 回顧"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:153
+msgid "Stuff:"
+msgstr "雜事："
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:155
+msgid "Actions:"
+msgstr "下一步行動："
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:158
+msgid "Projects:"
+msgstr "專案："
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:162
+msgid "Recent Date"
+msgstr "進期事項："
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:321
+msgid "1 week"
+msgstr "一週"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:322
+msgid "2 weeks"
+msgstr "兩週"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:323
+msgid "3 weeks"
+msgstr "三週"
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:324
+msgid "1 month"
+msgstr "四週"
+

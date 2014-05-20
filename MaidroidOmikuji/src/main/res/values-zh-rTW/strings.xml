@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maidroid 抽籤</string>
+
+    <string name="title">選擇角色圖安 -- Maidroid 抽籤</string>
+
+    <string name="addButton">新增</string>
+    <string name="cancelButton">取消</string>
+    <string name="okButton">確定</string>
+
+    <string name="message">請選擇以下的角色圖案，或自行新增。</string>
+
+</resources>

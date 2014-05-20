@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Golabl Setting -->
+    <string name="app_name">Maidroid Reminder</string>
+
+    <!-- res/layout/add.xml -->
+    <string name="add_alarm">提醒時間</string>
+    <string name="add_title">標題</string>
+    <string name="add_description">描述</string>
+    <string name="add_cancel">取消</string>
+    <string name="add_ok">確定</string>
+
+    <!-- res/layout/confirm.xml -->
+    <string name="confirm_later">請稍候再提醒我</string>
+    <string name="confirm_ok">好，我了解了</string>
+
+    <!-- code/ActivityList.scala -->
+    <string name="context_view">檢視</string>
+    <string name="context_edit">編輯</string>
+    <string name="context_delete">刪除</string>
+    <string name="context_delete_ok">刪除</string>
+    <string name="context_delete_cancel">取消</string>
+    <string name="menu_add">新增</string>
+    <string name="menu_preferences">偏好設定</string>
+    <string name="menu_clear">清除</string>
+    <string name="menu_about">關於</string>
+
+    <!-- code/ActivityMain.scala -->
+    <string name="main_week">本週</string>
+    <string name="main_month">本月</string>
+    <string name="main_all">全部</string>
+    <string name="main_outdate">過期</string>
+
+    <!-- code/ActivityPreferences.scala -->
+    <string name="prefs_maid_category">女僕</string>
+    <string name="prefs_current_maid">目前由【%s】為您服務喲！</string>
+    <string name="prefs_maid_list">請選擇女僕</string>
+
+    <string name="prefs_voice_category">恥力全開</string>
+    <string name="prefs_voice_checkbox">使用女僕語音</string>
+    <string name="prefs_voice_summary">開啟語音功能</string>
+    <string name="prefs_voice_volume">女僕音量</string>
+    <string name="prefs_voice_volume_summary">設定女僕語音的音量</string>
+    <string name="prefs_ignore_silent">無視靜音模式</string>
+    <string name="prefs_ignore_summary">在手機於靜音模式下仍然開啟語音</string>
+    <string name="prefs_long_toast">延長彈出通知時間</string>
+    <string name="prefs_long_toast_summary">出現彈出式視窗時加長顯示時間</string>
+
+    <string name="prefs_event_notification">事件通知</string>
+    <string name="prefs_use_system_notification">通知時不使用女僕語音</string>
+    <string name="prefs_use_system_notification_summary">提醒事項時使用系統通知鈴聲而非女僕語音</string>
+    <string name="prefs_notification_loop">重覆播放提醒音效</string>
+    <string name="prefs_notification_loop_summary">重覆播放提醒音效直到事件被開啟</string>
+
+</resources>

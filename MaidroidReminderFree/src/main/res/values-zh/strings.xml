@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MaidroidReminder Free</string>
+
+    <!-- Global -->
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+
+    <!-- 
+         Main Activity 
+
+         Files:
+            - /res/layout/main.xml
+    -->
+    <string name="add">新增</string>
+    <string name="browse">浏览</string>
+    <string name="settings">设定</string>
+    <string name="exit">离开</string>
+
+    <!-- 
+        Add/Edit event activity 
+
+        Files:
+            - res/layout/add.xml
+            - res/layout/edit.xml
+    -->
+    <string name="title">标题</string>
+    <string name="setDate">设定日期</string>
+    <string name="setTime">设定时间</string>
+    <string name="description">备注</string>
+
+    <!-- 
+        Pop-up dialog in event list activity 
+
+        Files:
+            - res/layout/event_context_dialog.xml
+    -->
+    <string name="edit">修改</string>
+    <string name="delete">删除</string>
+
+
+    <!--
+        Browse Activity
+        Files:
+            - src/main/scala/activity/BrowseActivity.scala
+    -->
+    <string name="week">本周</string>
+    <string name="month">本月</string>
+    <string name="all">全部</string>
+    <string name="repeat">重覆</string>
+    <string name="outdated">过期</string>
+    <string name="clear">清除</string>
+
+    <!-- 
+        Preference Activity
+        Files:
+            - res/xml/settings.xml
+    -->
+    <string name="voiceCategory">语音</string>
+    <string name="notificationCategory">事件通知设定</string>
+    <string name="enableVoiceTitle">女仆招呼语</string>
+    <string name="enableVoiceSummary">进入程式时播放主仆招呼语</string>
+    <string name="enableSoundTitle">音效</string>
+    <string name="enableVibrationTitle">震动</string>
+
+    <!-- 
+        View Activity
+        Files:
+            - res/layout/view.xml
+    -->
+    <string name="gotIt">好，我知道了</string>
+    <string name="remindLater">晚一点再提醒我</string>
+
+</resources>
+

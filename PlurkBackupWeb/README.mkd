@@ -1,0 +1,36 @@
+簡易噗浪備份服務
+================
+
+這是[簡易噗浪備份服務][0]的網站程式碼，版權沒有，歡迎隨意取用。
+
+[0]: http://plurkbackup.brianhsu.staxapps.net/
+
+使用技術
+========
+
+ - 程式語言
+   - [Scala Programming Language][1]
+
+ - 網站應用程式框架
+   - [Lift Web Framework][2]
+
+ - 噗浪 API 函式庫
+   - [SPlurk][3]
+
+ - 建置系統
+   - [Simple Build Tool][4]
+
+[1]: http://www.scala-lang.org/
+[2]: http://liftweb.net/
+[3]: https://github.com/brianhsu/SPlurk
+[4]: http://code.google.com/p/simple-build-tool/
+
+安裝方式
+========
+
+ 1. 安裝 Simple Build Tool
+ 2. git clone git://github.com/brianhsu/PlurkBackupWeb.git # 抓取程式碼
+ 3. cd PlurkBackupWeb # 切換目錄
+ 4. sbt update # 抓需要的函式庫
+ 5. sbt jetty-run
+ 6. 連線至 http://localhost:8080/

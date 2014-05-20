@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maidroid おみくじ</string>
+
+    <string name="title">キャラクター -- Maidroid おみくじ</string>
+
+    <string name="addButton">追加する</string>
+    <string name="cancelButton">キャンセル</string>
+    <string name="okButton">OK</string>
+
+    <string name="message">Choose character for your widget</string>
+
+</resources>

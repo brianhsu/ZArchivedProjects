@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Golabl Setting -->
+    <string name="app_name">Maidroid Reminder</string>
+
+    <!-- res/layout/add.xml -->
+    <string name="add_alarm">Alarm</string>
+    <string name="add_title">Title</string>
+    <string name="add_description">Description</string>
+    <string name="add_cancel">Cancel</string>
+    <string name="add_ok">OK</string>
+
+    <!-- res/layout/confirm.xml -->
+    <string name="confirm_later">Remind Me Later</string>
+    <string name="confirm_ok">OK</string>
+
+    <!-- code/ActivityList.scala -->
+    <string name="context_view">View</string>
+    <string name="context_edit">Edit</string>
+    <string name="context_delete">Delete</string>
+    <string name="context_delete_ok">Delete</string>
+    <string name="context_delete_cancel">Cancel</string>
+    <string name="menu_add">Add</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_clear">Clear</string>
+    <string name="menu_about">About</string>
+
+    <!-- code/ActivityMain.scala -->
+    <string name="main_week">Week</string>
+    <string name="main_month">Month</string>
+    <string name="main_all">All</string>
+    <string name="main_outdate">Outdate</string>
+
+    <!-- code/ActivityPreferences.scala -->
+    <string name="prefs_current_maid">Current Maid: %s</string>
+    <string name="prefs_maid_category">Maid</string>
+    <string name="prefs_maid_list">Choose The Maid</string>
+    <string name="prefs_voice_category">Voice</string>
+    <string name="prefs_voice_checkbox">Maid Voice</string>
+    <string name="prefs_voice_summary">Turn on/off maid voice</string>
+    <string name="prefs_ignore_silent">Always Voice-enabled</string>
+    <string name="prefs_ignore_summary">Enable maid voice even in silent mode</string>
+    <string name="prefs_voice_volume">Voice Volume</string>
+    <string name="prefs_voice_volume_summary">Set the volume of voice effect</string>
+    <string name="prefs_long_toast">Longer Toast Notification</string>
+    <string name="prefs_long_toast_summary">Show toast notification longer</string>
+    <string name="prefs_event_notification">Event Notification</string>
+    <string name="prefs_use_system_notification">Use System Notification Sound</string>
+    <string name="prefs_use_system_notification_summary">Use system notification sound instead of maid voice</string>
+    <string name="prefs_notification_loop">Repeat Notification Sound</string>
+    <string name="prefs_notification_loop_summary">Replay notification sound unitl event is opened</string>
+
+</resources>

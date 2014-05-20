@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Golabl Setting -->
+    <string name="mia_name">Mia</string>
+
+    <!-- Remind Message -->
+    <string name="mia_remind_1">Excuse me, Master.</string>
+    <string name="mia_remind_2">There is new event, please don\'t forget that.</string>
+    <string name="mia_remind_3">
+    <![CDATA[
+        |Title：%s\n
+        |Description：%s\n
+    ]]>
+    </string>
+
+    <!-- Add Item -->
+    <string name="mia_add_item_1">Master, you have new a date?</string>
+    <string name="mia_add_item_2">Please fill in the title and setup the time.</string>
+    <string name="mia_add_item_3">Then Mia will remind you later.</string>
+
+    <!-- Edit Item -->
+    <string name="mia_edit_item_1">What? The date has changed?</string>
+    <string name="mia_edit_item_2">I will correct it immediately.</string>
+
+    <!-- List Week -->
+    <string name="mia_list_week_1"><![CDATA[
+        |お帰りなさいませ、御主人様。\n
+        |You may click the message to continue.
+    ]]>
+    </string>
+    <string name="mia_list_week_2">Master could press MENU key and add something that need Mia remind you.</string>
+    <string name="mia_list_week_3">By the way, if Master long click on the item, you could edit or delete it.</string>
+
+    <!-- List Month -->
+    <string name="mia_list_month_1">Here is activity of this month.</string>
+    <string name="mia_list_month_2">Master, please take care your self, don\'t be to so hard.</string>
+
+    <!-- List All -->
+    <string name="mia_list_all_1">Master want to see all activity? Please wait a moment.</string>
+    <string name="mia_list_all_2">Here is it. Does Mia forget something?</string>
+
+    <!-- List Outdate -->
+    <string name="mia_list_outdate_1">Here is all the event that Mia has reminded Master....</string>
+    <string name="mia_list_outdate_2">They are memories between us, aren\'t they?</string>
+
+    <!-- About -->
+    <string name="mia_about_1">
+    <![CDATA[
+        |What? About Mia?\n
+        |I am Mia the maid. Master could tell me what event you need Mia to remind you.
+    ]]>
+    </string>
+    <string name="mia_about_2"><![CDATA[
+        |Master may take a look at <a href="http://bone.twbbs.org.tw/maidroid">Maidroid</a>, it\'s where Mia come from.
+    ]]></string>
+    <string name="mia_about_3">And Mia is created by whatzz and brianhsu.</string>
+
+    <!-- Sync -->
+    <string name="mia_sync_1">If Master use Google Calendar service, Mia could remind you the event on the Calendar.</string>
+    <string name="mia_sync_2">Just provide the username and password, Mia would handle everything!</string>
+
+    <!-- Item Selected -->
+    <string name="mia_item_select_first">This event? Let me see....</string>
+    <string name="mia_item_select_no_desc">I remember Mia should remind Master at %s，is that correct?</string>
+    <string name="mia_item_select_desc_1">
+    <![CDATA[
+        |Mia should remind Master the following event at %s :\n
+        |%s
+    ]]>
+    </string>
+    <string name="mia_item_select_desc_2">Is that correct?</string>
+
+    <!-- Delete Item -->
+    <string name="mia_delete_message">Do you really want to delete it, Master?</string>
+    <string name="mia_delete_title">Delete "%s"</string>
+
+
+    <!-- Others -->
+    <string name="mia_toastOK">OK, Mia got it.</string>
+    <string name="mia_toastNoDisturb">See you laster, my Master.</string>
+    <string name="mia_addItemNoTitle">Master, it seems you forgot to fill in the title.</string>
+    <string name="mia_addItemTimeError">Master, it looks like the date and time is wrong.</string>
+    <string name="mia_excuseMe">Excuse me, Master.</string>
+    <string name="mia_no_username">Master, you forget tell Mia your google account!</string>
+    <string name="mia_no_password">Wha.... Master do not give me the password, what shoul Mia do?</string>
+
+</resources>

@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:lift="http://liftweb.net/">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    
+		<title>簡易噗浪備份器</title>
+    <lift:CSS.blueprint />
+    <script id="jquery" src="/classpath/jquery.js" type="text/javascript"/>
+    <script id="json" src="/classpath/json.js" type="text/javascript"/>
+    <style type="text/css">
+/* <![CDATA[ */
+.edit_error_class {
+  display: block;
+  color: red;
+}
+
+.keyword ul {
+  list-style-type: none;
+}
+
+.keyword ul li {
+  list-style-type: none;
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+
+  /* ]]> */
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column span-12 last" style="text-align: right">
+        <h1 class="alt">簡易噗浪備份器<img alt="" id="ajax-loader" style="display:none; margin-bottom: 0px; margin-left: 5px" src="/images/ajax-loader.gif"/></h1>
+      </div>
+
+      <hr/>
+
+      <div class="column span-3 colborder sidebar">
+        <hr class="space" />
+        <lift:Menu.builder />	
+      </div>
+
+      <div class="column span-20 last">
+        <lift:bind name="content" />
+        <div>
+          <lift:Msgs showAll="true"/>
+          <hr class="space" />
+        </div>
+      </div>
+
+      <hr />
+      <div class="column span-23 last" style="text-align: center">
+        <h4 class="alt">
+            Created by <a href="http://www.plurk.com/brianhsu">墳墓 (Brian Hsu)</a>. <br/><br/>
+            Powerd by <a href="http://liftweb.net/">Lift Webframework</a> and <a href="http://www.scala-lang.org">Scala Programming Language</a>.</h4>
+      </div>
+      
+    </div>
+  </body>
+</html>

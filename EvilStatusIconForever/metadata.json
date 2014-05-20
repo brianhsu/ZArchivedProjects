@@ -1,0 +1,7 @@
+{
+    "shell-version": ["3.2", "3.2.1", "3.4" "3.6" "3.8"], 
+    "uuid": "EvilStatusIconForever@bone.twbbs.org.tw", 
+    "url": "http://github.com/brianhsu/EvilStatusIconForever",
+    "name": "Evil Status Icon Forerver", 
+    "description": "This extension let you make notification status icon show at the top bar and remove bulit-in status icon of your choice."
+}

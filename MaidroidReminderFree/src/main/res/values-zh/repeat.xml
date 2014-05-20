@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="repeat_prompt">请选择重覆模式</string>
+    <string-array name="repeat_settings">
+        <item>不重覆</item>
+        <item>每天</item>
+        <item>周一至周五</item>
+        <item>每个星期</item>
+        <item>每个月</item>
+    </string-array>
+</resources>
+

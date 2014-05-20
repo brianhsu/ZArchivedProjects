@@ -1,0 +1,138 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Before Start &mdash; Lift Tutorial</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2012.03',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Lift Tutorial" href="index.html" />
+    <link rel="next" title="1. 從零開始建立第一個 Lift 程式" href="FirstLiftApp.html" />
+    <link rel="prev" title="Lift Tutorial" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FirstLiftApp.html" title="1. 從零開始建立第一個 Lift 程式"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Lift Tutorial"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Lift Tutorial</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="before-start">
+<h1>Before Start<a class="headerlink" href="#before-start" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction-to-lift">
+<h2>Introduction to Lift<a class="headerlink" href="#introduction-to-lift" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://liftweb.net/">Lift</a> 是一套使用 <a class="reference external" href="http://www.scala-lang.org/">Scala</a> 程式語言的網頁應用程式框架，其腳色類似於使用 Ruby 的 Rails 或使用 Python 的 DJango 網頁框架，提供了我們一套快速方便的工具來建立網頁應用程式。</p>
+<p>由於 Scala 採用 Java Virtual Machine 做為執行環境，而且 Lift 符合 Java Servlet 的規範，因此你可以把 Lift 的應用程式包裝成 WAR 檔，並且部署到 Tomcat 或 Jetty 等 Java Servlet Container 上。</p>
+<p>與其他常見的網頁應用程式框架不同，並不採用 <a class="reference external" href="https://zh.wikipedia.org/zh-tw/MVC">MVC</a> 設計模式，而是採了了另一種稱為 View-First 的設計哲學，讓我們的應用程式的模版是單純的 xHTML / HTML5 檔案，而不能含有任何的程式碼。</p>
+<p>這種設計哲學讓 Lift 對於網頁的版設計師來說非常友善，他們可以用任何 HTML 網頁編輯器來做為編寫 HTML 頁面的工具，而後端的程式設計師也不必將前端設計師的 HTML 進行大符度的修改，就可以將前端與後端橋接起來。</p>
+<p>除了提供了程式碼與外觀嚴格分離的模版系統外，Lift 也內建容易使用的 Ajax / Comet API，以及針對許多安性性的問題在框架的層次就將其阻檔，讓開發者可以專注在程式邏輯的開發上。</p>
+</div>
+<div class="section" id="tutorial">
+<h2>本 Tutorial 的順序編排<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<p>由於 Lift 是採用 View-First 而非 MVC 設計模式，再加上其模版系統與眾不同，因此對於已經習慣 MVC 的開發者來說，其學習曲線較陡峭，而且常常不知道要如何將資料使用 Lift 的模版系統來呈現。</p>
+<p>本 Tutorial 試著從 View-First 的觀點出發，在第一章時先學習如何從零開始，建立一個可以顯示目前時間的 Hello World 程式，並且介紹 Lift 應用程式的基本組成。</p>
+<p>接著我們會在第二章詳細介紹 Lift 的模版系統，讓我們可以把任何資料依照我們的需求注入前端的模版中並顯示給使用者。</p>
+<p>等到介紹完模版系統，我們會在第三章開始介紹如何處理 HTML 表單，如何將使用者輸入的表單傳回後端伺服器處理並回應給使用者，接著在第四章會介紹如何使用 Session 等功能，來暫時儲存使用者的資料，供使用者在瀏覽網站的時候使用。</p>
+<p>等到介紹完 HTML 表單處理之後，第五章和第六章我們會介紹 Lift 所提供的 AJAX 以及 Comet 功能，讓我們能夠開發具有高度互動性的網頁應用程式。</p>
+<p>到這邊為止，我們已經將網頁應用程式的前端部份介紹的差不多了，接下來的第七章會介紹 Lift 所提供的 SiteMap 功能，看 SiteMap 如何提供我們一套簡單的方式來進行網頁的權限控制，以及在第八章介紹如何在 Lift 中撰寫 REST 風格的 API。</p>
+<p>最後在第九章，我們會介紹如何在 Lift 中與 SQL 資料庫連線，讓我們可以將使用者的資料儲存到資料庫中，並且在使用者下次連線的時候繼續使用。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Before Start</a><ul>
+<li><a class="reference internal" href="#introduction-to-lift">Introduction to Lift</a></li>
+<li><a class="reference internal" href="#tutorial">本 Tutorial 的順序編排</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Lift Tutorial</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="FirstLiftApp.html"
+                        title="next chapter">1. 從零開始建立第一個 Lift 程式</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/BeforeStart.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FirstLiftApp.html" title="1. 從零開始建立第一個 Lift 程式"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Lift Tutorial"
+             >previous</a> |</li>
+        <li><a href="index.html">Lift Tutorial</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright Brian Hsu, 2013.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

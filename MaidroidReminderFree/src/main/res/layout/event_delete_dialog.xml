@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:minWidth="320dp"
+              android:maxWidth="320dp"
+              android:minHeight="350dp"
+              android:maxHeight="350dp"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <ImageView android:id="@+id/event_delete_maid"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:layout_weight="1"/>
+
+    <ScrollView android:id="@+id/event_delete_scrollView"
+                android:paddingTop="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5">
+        <TextView android:id="@+id/event_delete_message"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:minWidth="320dp"
+                  android:maxWidth="320dp"
+                  android:minHeight="100dp"
+                  android:maxHeight="100dp"
+                  android:textSize="20sp"/>
+    </ScrollView>
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="5px"
+                  android:background="@drawable/background_gray">
+
+        <Button android:id="@+id/context_delete_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="@string/ok"/>
+
+        <Button android:id="@+id/context_delete_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="@string/cancel"/>
+    </LinearLayout>
+
+</LinearLayout>

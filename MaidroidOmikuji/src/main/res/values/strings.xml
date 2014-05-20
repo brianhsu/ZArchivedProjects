@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maidroid Omikuji</string>
+
+    <string name="title">Choose Character -- Maidroid Omikuji</string>
+
+    <string name="addButton">Add</string>
+    <string name="cancelButton">Cancel</string>
+    <string name="okButton">OK</string>
+
+    <string name="message">Choose character for your widget</string>
+</resources>

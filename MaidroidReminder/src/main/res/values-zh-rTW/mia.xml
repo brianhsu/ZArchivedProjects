@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Golabl Setting -->
+    <string name="mia_name">米婭</string>
+
+    <!-- Remind Message -->
+    <string name="mia_remind_1">主人，抱歉打擾了。</string>
+    <string name="mia_remind_2">您有新的行程，請不要忘記了喲！</string>
+    <string name="mia_remind_3">
+    <![CDATA[
+        |標題：%s\n
+        |內容：%s\n
+    ]]>
+    </string>
+
+    <!-- Add Item -->
+    <string name="mia_add_item_1">主人又有新行程了嗎？</string>
+    <string name="mia_add_item_2">記得要填寫標題，還有時間也要設定喔！</string>
+    <string name="mia_add_item_3">不然米婭就不知道該什麼時候提醒主人了喲。</string>
+
+    <!-- Edit Item -->
+    <string name="mia_edit_item_1">咦咦咦？主人要更改行程嗎？</string>
+    <string name="mia_edit_item_2">不快點記下來不行吶！</string>
+
+    <!-- List Week -->
+    <string name="mia_list_week_1">お帰りなさいませ、御主人様。提醒主人，按對話框能夠繼續喲！</string>
+    <string name="mia_list_week_2">主人可以按下 Menu 鍵，來新增需要米婭提醒的事情。</string>
+    <string name="mia_list_week_3">另外，如果在各個提醒事項上長按，可以也修改或刪除那個項目喔！</string>
+
+    <!-- List Month -->
+    <string name="mia_list_month_1">這裡列出的是主人這一個月的行程喲！</string>
+    <string name="mia_list_month_2">請主人不要太勉強自己，不然會把身體搞壞的喲。</string>
+
+    <!-- List All -->
+    <string name="mia_list_all_1">咦～～～主人要看所有的行程嗎？等米婭一下喲！</string>
+    <string name="mia_list_all_2">這裡是主人所有的行程，米婭應該沒有漏掉什麼吧？</string>
+
+    <!-- List Outdate -->
+    <string name="mia_list_outdate_1">這裡都是米婭曾經提醒過主人的事。</string>
+    <string name="mia_list_outdate_2">只要看著，就覺得充滿了滿滿的回憶呢。</string>
+
+    <!-- About -->
+    <string name="mia_about_1">
+    <![CDATA[
+        |咦？主人是在問我嗎？\n
+        |我是メイド米婭，主人可以交待我事情，時間到了我會提醒主人喲！
+    ]]>
+    </string>
+    <string name="mia_about_2"><![CDATA[
+        如果主人對米婭有興趣的話，可以到 <a href="http://bone.twbbs.org.tw/maidroid">Maidroid</a> 看看米婭的詳細資料。
+    ]]></string>
+    <string name="mia_about_3">另外偷偷告訴主人，我是由 PTT 上的 whatzz 和 brianhsu 創造出來的喲！</string>
+
+    <!-- Sync -->
+    <string name="mia_sync_1">如果主人有使用 Google Calendar 的話，米婭可以幫主人提醒日曆上面事喲。</string>
+    <string name="mia_sync_2">只要主人填好上面的資料，再按下『同步』按鈕，剩下的就交給米婭吧！</string>
+
+    <!-- Item Selected -->
+    <string name="mia_item_select_first">主人說這件事啊？我看看喲－－</string>
+    <string name="mia_item_select_no_desc">米婭記得是在 %s 的時候要提醒主人，這樣對嗎？</string>
+    <string name="mia_item_select_desc_1">
+    <![CDATA[
+        |主人是吩附在 %s 的時候要提醒主人以下以事情：\n
+        |%s
+    ]]>
+    </string>
+    <string name="mia_item_select_desc_2">米婭沒記錯吧？</string>
+
+    <!-- Delete Item -->
+    <string name="mia_delete_message">主人確定要刪除這個項目嗎？</string>
+    <string name="mia_delete_title">刪除【%s】</string>
+
+    <!-- Others -->
+    <string name="mia_toastOK">好的，米婭知道了。</string>
+    <string name="mia_toastNoDisturb">那就不打擾主人囉。</string>
+    <string name="mia_addItemNoTitle">主人忘了填標題了喔！</string>
+    <string name="mia_addItemTimeError">主人好像把時間搞錯了呢。</string>
+    <string name="mia_excuseMe">主人，抱歉打擾了！</string>
+    <string name="mia_no_username">主人好像忘記告訴米婭主人的帳號了說……</string>
+    <string name="mia_no_password">主人忘了給米婭密碼，米婭該怎麼辦呢？</string>
+</resources>

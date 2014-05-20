@@ -1,0 +1,18 @@
+== Overview ==
+
+This is an simple Scala/SWT program that pop up a balloon message
+on try icon when there are IRC message come in.
+
+== Requirement ==
+
+Linux + SBT + SWT
+
+== Install and Compile ==
+
+ * Install SBT (Simple Build Tool)
+ * sbt compile
+
+== Run ==
+
+ * sbt run [channel1] [channel2] [channel3]...
+

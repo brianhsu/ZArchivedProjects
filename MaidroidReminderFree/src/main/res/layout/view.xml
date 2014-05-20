@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent" 
+              android:layout_height="fill_parent" 
+              android:orientation="vertical" >
+
+    <ImageView android:id="@+id/view_maid"
+               android:background="@drawable/room"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:layout_weight="1"
+               android:paddingTop="10sp"/>
+
+    <ScrollView android:id="@+id/view_scrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2">
+        <TextView android:id="@+id/view_message"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:textSize="20sp"/>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/background_gray"
+                  android:paddingTop="5sp"
+                  android:paddingLeft="5sp"
+                  android:paddingRight="5sp"
+                  android:orientation="horizontal">
+
+        <Button android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:id="@+id/view_ok"
+                android:text="@string/gotIt"/>
+
+        <Button android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:id="@+id/view_remind_later"
+                android:text="@string/remindLater"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

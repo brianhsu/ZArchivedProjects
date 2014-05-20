@@ -1,0 +1,334 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Lift 模版系統基礎 &mdash; Lift Tutorial</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2012.03',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Lift Tutorial" href="index.html" />
+    <link rel="prev" title="1. 從零開始建立第一個 Lift 程式" href="FirstLiftApp.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>瀏覽</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="總索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="FirstLiftApp.html" title="1. 從零開始建立第一個 Lift 程式"
+             accesskey="P">上一頁</a> |</li>
+        <li><a href="index.html">Lift Tutorial</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="lift">
+<h1>2. Lift 模版系統基礎<a class="headerlink" href="#lift" title="Permalink to this headline">¶</a></h1>
+<p>Lift 的模版系統與其他常見的 Web Framework 相當不同，在 Lift 裡面，我們不是在模版裡執行特定的程式碼來組合出最後的結果。相反地，在 Lift 裡面，模版是單純的 xHTML / HTML5 的檔案，當我們需要注入動態內容的時候，是將 xHTML / HTML5 當中的節點，做為參數傳遞給 Scala 函式做處理，並且以處理過後的節點取代新的節點。</p>
+<p>這是在 Function Programming 常見的一種做法，我們將資料經過特定的函式進行轉換後取得新的資料。</p>
+<p>然而由於這種做法在其他的網頁應用程式框架與模版系統中並不常見到，因此初次接觸 Lift 的使用者，往往不知道該如何達成某些在其他框架的模版系統中相當直覺的功能－－例如，如果模版中不能有迴圈的話，那我們怎麼顯示具有重覆性的資料，像是表格或是清單？</p>
+<p>因此我們在這一章會介紹 Lift 的模版系統基礎，告訴你如何利用 Lift 的模版系統，組合出你想要的 HTML 結果。</p>
+<div class="section" id="functional-programming">
+<h2>2.1. Functional Programming 一些常見的特性<a class="headerlink" href="#functional-programming" title="Permalink to this headline">¶</a></h2>
+<p>如果你已經接觸了 Scala 一段時間，那應該聽過 <a class="reference external" href="http://en.wikipedia.org/wiki/Functional_programming">Functional Programming</a> 這種編程典範，以及其中的一些特性，以及使用過其中的某些功能，例如 <tt class="docutils literal"><span class="pre">List.map()</span></tt> 此函式。</p>
+<p>在 Lift 的模版系統中也大量運用到 Functional Programming 的概念，因此在這一節中我們會復習一些 Functional Programming 中常見的特性。</p>
+<div class="section" id="immutable-data-sturcture">
+<h3>2.1.1. Immutable Data Sturcture<a class="headerlink" href="#immutable-data-sturcture" title="Permalink to this headline">¶</a></h3>
+<p>在 Function Programming 的典範中，資料結構（物件）被建立後就是不可以改變的，任何對於該物件的操作（例如呼叫函式）若是會產生狀態的改變，那麼實際上是產生一個新的物件。</p>
+<p>Java / Scala 當中的字串也有同樣的特性，以下面的程式碼為例，你可以看到當我們針對 <tt class="docutils literal"><span class="pre">str1</span></tt> 呼叫 <tt class="docutils literal"><span class="pre">substring(0,5)</span></tt> 取回前五個字元時，事實上是產生了一個新的字串物件，原先 <tt class="docutils literal"><span class="pre">str1</span></tt> 所指到的 <tt class="docutils literal"><span class="pre">Hello</span> <span class="pre">World</span></tt> 字串仍然是維持原樣，並未被改變。</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">str1</span> <span class="k">=</span> <span class="s">&quot;Hello World&quot;</span>
+<span class="n">str1</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="nc">Hello</span> <span class="nc">World</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">str2</span> <span class="k">=</span> <span class="n">str1</span><span class="o">.</span><span class="n">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
+<span class="n">str2</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="nc">Hello</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">str1</span>
+<span class="n">res0</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="nc">Hello</span> <span class="nc">World</span>
+</pre></div>
+</div>
+<p>同樣的，我們在 Scala 中經常使用到的 <tt class="docutils literal"><span class="pre">List</span></tt> 物件，也是 Immutable Data Structure，當我們呼叫例如 <tt class="docutils literal"><span class="pre">take</span></tt> 等函式時，Scala 事實上是產生了一個新的 <tt class="docutils literal"><span class="pre">List</span></tt> 做為回傳值，而原本的物件並沒有被改變。</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">xs</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">9</span><span class="o">)</span>
+<span class="n">xs</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">9</span><span class="o">)</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">ys</span> <span class="k">=</span> <span class="n">xs</span><span class="o">.</span><span class="n">take</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+<span class="n">ys</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">xs</span>
+<span class="n">res1</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">9</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="high-order-function">
+<h3>2.1.2. High-order Function<a class="headerlink" href="#high-order-function" title="Permalink to this headline">¶</a></h3>
+<p>在 Functional Programming 中，函式是 <a class="reference external" href="http://en.wikipedia.org/wiki/First-class_citizen">First-class citizen</a>，這代表了函式與整數或物件等東西一樣，可以做為函式的參數，亦或是回傳值。</p>
+<p>例如我們在 Scala 中經常使用的 <tt class="docutils literal"><span class="pre">List.map()</span></tt> 函式，他所接受的參數就是另一個函式，假使我們要將某個 List 中的整數都加二的話，那只要傳遞一個接受一個整數，並返回一個整數的函式即可。</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">plusOne</span> <span class="k">=</span> <span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">plusOne</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span> <span class="k">=</span> <span class="o">&lt;</span><span class="n">function1</span><span class="o">&gt;</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">10</span><span class="o">).</span><span class="n">map</span><span class="o">(</span><span class="n">plusOne</span><span class="o">)</span>
+<span class="n">res2</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">11</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>另一方面，函式也可以做為回傳值，例如我們可以寫一個函式，其回傳值是另一個函式：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">createAFunc</span><span class="o">(</span><span class="n">add</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">add</span>
+<span class="n">createAFunc</span><span class="k">:</span> <span class="o">(</span><span class="kt">add:</span> <span class="kt">Int</span><span class="o">)</span><span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">plusSeven</span> <span class="k">=</span> <span class="n">createAFunc</span><span class="o">(</span><span class="mi">7</span><span class="o">)</span>
+<span class="n">plusSeven</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span> <span class="k">=</span> <span class="o">&lt;</span><span class="n">function1</span><span class="o">&gt;</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">plusFive</span> <span class="k">=</span> <span class="n">createAFunc</span><span class="o">(</span><span class="mi">5</span><span class="o">)</span>
+<span class="n">plusFive</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span> <span class="k">=</span> <span class="o">&lt;</span><span class="n">function1</span><span class="o">&gt;</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">plusSeven</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+<span class="n">res3</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">plusFive</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+<span class="n">res4</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<p>在上面的程式碼範例中，我們撰寫了一個 <tt class="docutils literal"><span class="pre">createAFunc</span></tt> 函式，其回傳的是另一個接受一個整數參數 x 並加上 add 的函式，接著我們再透過呼叫 <tt class="docutils literal"><span class="pre">createAFunc(7)</span></tt> 和 <tt class="docutils literal"><span class="pre">createAFunc(5)</span></tt> 來建立兩個新的函式，並且使用這兩個函式。</p>
+</div>
+<div class="section" id="composable-function">
+<h3>2.1.3. Composable Function<a class="headerlink" href="#composable-function" title="Permalink to this headline">¶</a></h3>
+<p>另一個 Functional Programming 常見的特性是我們可以透過組合不同的函式來得到新的函式，在 Scala 中我們可以用 <tt class="docutils literal"><span class="pre">andThen</span></tt> 與 <tt class="docutils literal"><span class="pre">compose</span></tt> 來達成這件事情。</p>
+<p>舉例來說，我們可以用 <tt class="docutils literal"><span class="pre">andThen</span></tt> 來以左結合的方式來組合兩個函式，當我們呼叫組合出的新函式時，會先呼叫左邊的函式，並且將左邊函式的結果傳入給右邊的函式，最後得到結果。</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">plusOne</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">plusOne</span><span class="k">:</span> <span class="o">(</span><span class="kt">x:</span> <span class="kt">Int</span><span class="o">)</span><span class="kt">Int</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">timesFive</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="n">timesFive</span><span class="k">:</span> <span class="o">(</span><span class="kt">x:</span> <span class="kt">Int</span><span class="o">)</span><span class="kt">Int</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">newFunc</span> <span class="k">=</span> <span class="n">plusOne</span> <span class="k">_</span> <span class="n">andThen</span> <span class="n">timesFive</span> <span class="k">_</span>
+<span class="n">newFunc</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span> <span class="k">=</span> <span class="o">&lt;</span><span class="n">function1</span><span class="o">&gt;</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">newFunc</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>   <span class="c1">// 等同 timesFive(plusOne(2))</span>
+<span class="n">res6</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">15</span>
+</pre></div>
+</div>
+<p>我們也可以使用 <tt class="docutils literal"><span class="pre">compose</span></tt> 以右結合的方式來組合函式，如下所示，若我們將 <tt class="docutils literal"><span class="pre">andThen</span></tt> 代換成 <tt class="docutils literal"><span class="pre">compose</span></tt> 的話，會先執行 <tt class="docutils literal"><span class="pre">timesFive</span></tt> 再執行 <tt class="docutils literal"><span class="pre">plusOne</span></tt> 這個函式。</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">plusOne</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">plusOne</span><span class="k">:</span> <span class="o">(</span><span class="kt">x:</span> <span class="kt">Int</span><span class="o">)</span><span class="kt">Int</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">timesFive</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="n">timesFive</span><span class="k">:</span> <span class="o">(</span><span class="kt">x:</span> <span class="kt">Int</span><span class="o">)</span><span class="kt">Int</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">newFunc</span> <span class="k">=</span> <span class="n">plusOne</span> <span class="k">_</span> <span class="n">compose</span> <span class="n">timesFive</span> <span class="k">_</span>
+<span class="n">newFunc</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span> <span class="k">=</span> <span class="o">&lt;</span><span class="n">function1</span><span class="o">&gt;</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">newFunc</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>  <span class="c1">// 等同 plusOne(timesFive(2))</span>
+<span class="n">res0</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">11</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>2.2. Lift 模版系統基本流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>上一節我們看到了 Functional Programming 的一些特性，在這一節當中，我們會介紹 Lift 的 Template / Snippet 機制的基本流程，並且在下一節中介紹這些機制與 Functional Programming 的一些特性的對應。</p>
+<div class="section" id="id2">
+<h3>2.2.1. 在模版中指定要呼叫的函式<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>由於在 Lift 的模版系統裡不能有任何的程式碼，因此在 Lift 中我們是把模版中的 HTML 節點做為參數傳入特定的 Function 中，並且將該 Function 回傳的新 HTML 節代取原先的節點。</p>
+<p>在使用上，當 Lift 的模版系統看到模版中的 HTML 節點有 <tt class="docutils literal"><span class="pre">data-lift=&quot;ClassName.method&quot;</span></tt> 屬性時，會把該節點做為參數傳入給 <tt class="docutils literal"><span class="pre">ClassName</span></tt> 物件的 <tt class="docutils literal"><span class="pre">method</span></tt> 函式，我們稱這種函式為 Snippet。</p>
+<p>舉例而言，以下的 HTML 模版會將 <tt class="docutils literal"><span class="pre">&lt;span&gt;</span></tt> 節點傳入 <tt class="docutils literal"><span class="pre">MySnippet</span></tt> 物件裡的 <tt class="docutils literal"><span class="pre">currentDate</span></tt> 函式並且以回傳值取代原先的節點；同樣的，其中的 <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt> 節點會被傳入 <tt class="docutils literal"><span class="pre">MySnippet</span></tt> 物件的 <tt class="docutils literal"><span class="pre">currentTime</span></tt> 函式，並以回傳值取代原先的節點，而其他的節點則維持原樣。</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">data-lift=</span><span class="s">&quot;MySnippet.currentDate&quot;</span><span class="nt">&gt;</span>2013-03-03<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-lift=</span><span class="s">&quot;MySnippet.currentTime&quot;</span><span class="nt">&gt;</span>13:22<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>除了像上述方式指定完整的類別與函式名稱外，Lift 也支援了以下幾種型式：</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">data-lift=&quot;MySnippet&quot;</span></tt></dt>
+<dd>如果在 <tt class="docutils literal"><span class="pre">data-lift</span></tt> 中只有類別名稱而沒有函式名稱，Lift 會使用 <tt class="docutils literal"><span class="pre">render</span></tt> 這個函式。</dd>
+<dt><tt class="docutils literal"><span class="pre">data-lift=&quot;my_snippet.current_time&quot;</span></tt></dt>
+<dd>除了使用 CamelCase 之外，你也可以使用底線的命名風格，但 Lift 在尋找要使用的函式時會將其轉換成 CamelCase 格式，所以在這個例子中，Lift 仍然會去尋找 <tt class="docutils literal"><span class="pre">MySnippet.currentTime</span></tt> 此函式。</dd>
+<dt><tt class="docutils literal"><span class="pre">data-lift=&quot;my_snippet&quot;</span></tt></dt>
+<dd>使用底線做為分隔符號的時候，一樣可以省略函式的名稱，讓 Lift 使用預設的 <tt class="docutils literal"><span class="pre">render</span></tt> 這個函式。</dd>
+</dl>
+</div></blockquote>
+<p>此外值得注意的是，我們在 HTML 模版當中指定的只有類別名稱，而 Lift 會到我們在 <tt class="docutils literal"><span class="pre">Boot.scala</span></tt> 中使用 <tt class="docutils literal"><span class="pre">LiftRules.addToPackages</span></tt> 當中指定的 Package 中的 snippet 子 package 中尋找該類別。</p>
+<p>舉例而言，若我們的 Boot.scala 裡有下列的設定：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="nc">LiftRules</span><span class="o">.</span><span class="n">addToPackages</span><span class="o">(</span><span class="s">&quot;net.myproject&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>那麼在上面的例子中，Lift 會使用 <tt class="docutils literal"><span class="pre">net.myproject.snippet.MySnippet</span></tt> 這個類別。</p>
+</div>
+<div class="section" id="snippet">
+<h3>2.2.2. 基本流程－－撰寫 Snippet 函式<a class="headerlink" href="#snippet" title="Permalink to this headline">¶</a></h3>
+<p>當我們在 HTML 模版中指定了要使用的 Snippet 之後，我們需要實作模版中指定的 Snippet 類別與函式。</p>
+<p>在 Lift 當中，基本的 Snippet 函式會有以下兩個兩個種類：</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">def</span> <span class="pre">render(html:</span> <span class="pre">NodeSeq):</span> <span class="pre">NodeSeq</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">def</span> <span class="pre">render:</span> <span class="pre">CssSel</span></tt></li>
+</ul>
+<p>在第一個類型中，我們的 Snippet 函式接收一個代表 HTML 節點的 <a class="reference external" href="http://www.scala-lang.org/api/current/index.html#scala.xml.NodeSeq">scala.xml.NodeSeq</a> 物件，並自己處理該節點後，返回一個新的 <tt class="docutils literal"><span class="pre">NodeSeq</span></tt> 物件，Lift 會將原先的節點用這個新的 <tt class="docutils literal"><span class="pre">NodeSeq</span></tt> 物件取代。</p>
+<p>當實作 <tt class="docutils literal"><span class="pre">def</span> <span class="pre">render(html:</span> <span class="pre">NodeSeq):</span> <span class="pre">NodeSeq</span></tt> 這種型式的 Snippet 時，我們可以直接使用 <a class="reference external" href="http://www.scala-lang.org/api/current/scala/xml/package.html">scala.xml</a> 這個 Package 所提供的 API，亦或是透過 <a class="reference external" href="http://liftweb.net/api/25-rc1/api/#net.liftweb.util.BindHelpers$">net.liftweb.util.BindHelpers</a> 來對節點進行處理。</p>
+<p>第二種型式的 Snippet 函式，我們返回的是一個 <a class="reference external" href="http://liftweb.net/api/25-rc1/api/#net.liftweb.util.CssSel">net.liftweb.util.CssSel</a> 物件，而這個物件本身就是一個 <tt class="docutils literal"><span class="pre">NodeSeq</span> <span class="pre">=&gt;</span> <span class="pre">NodeSeq</span></tt> 的函式，所以 Lift 一樣可以將使用者標注的節點傳入給 <tt class="docutils literal"><span class="pre">render</span></tt> 回傳的 <tt class="docutils literal"><span class="pre">CssSel</span></tt> 物件做處理，並且取代原先的節點。</p>
+<p>關於 <tt class="docutils literal"><span class="pre">CssSel</span></tt> 的使用，我們會在之後的章節中詳細介紹。</p>
+</div>
+<div class="section" id="xhtml-vs-html5">
+<h3>2.2.3. xHTML vs HTML5<a class="headerlink" href="#xhtml-vs-html5" title="Permalink to this headline">¶</a></h3>
+<p>Lift 預設模版和輸出網頁均使用 xHTML 格式，但也支援以下兩種設定：</p>
+<ul class="simple">
+<li>模版和輸出網頁均為 HTML5</li>
+<li>模版為 xHTML，輸出網頁為 HTML5</li>
+</ul>
+<p>我們可以使用在 <tt class="docutils literal"><span class="pre">Boot.scala</span></tt> 使用 <tt class="docutils literal"><span class="pre">LiftRules.htmlProperties</span></tt> (<a class="reference external" href="http://liftweb.net/api/25-rc1/api/#net.liftweb.http.LiftRules">ScalaDoc</a>) 來進行設定，若要使用 HTML5 做為模版，可以使用以下的設定，使用 <a class="reference external" href="http://liftweb.net/api/25-rc1/api/#net.liftweb.http.Html5Properties">Html5Properties</a> 物件來指定我們的模版與輸出都是 HTML5：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">import</span> <span class="nn">net.liftweb.http.Req</span>
+<span class="k">import</span> <span class="nn">net.liftweb.http.Html5Properties</span>
+<span class="k">import</span> <span class="nn">net.liftweb.http.LiftRules</span>
+
+<span class="k">class</span> <span class="nc">Boot</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">boot</span> <span class="o">{</span>
+    <span class="nc">LiftRules</span><span class="o">.</span><span class="n">htmlProperties</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">set</span> <span class="o">{</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Req</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nc">Html5Properties</span><span class="o">(</span><span class="n">r</span><span class="o">.</span><span class="n">userAgent</span><span class="o">)</span> <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>若要使用 xHTML 做為網頁模版，但在輸出的時候使用 HTML5 的話，可以在 <tt class="docutils literal"><span class="pre">Boot.scala</span></tt> 中使用下列的設定，並傳入 <a class="reference external" href="http://liftweb.net/api/25-rc1/api/#net.liftweb.http.XHtmlInHtml5OutProperties">XHtmlInHtml5OutProperties</a> 物件做設定：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">import</span> <span class="nn">net.liftweb.http.Req</span>
+<span class="k">import</span> <span class="nn">net.liftweb.http.XHtmlInHtml5OutProperties</span>
+<span class="k">import</span> <span class="nn">net.liftweb.http.LiftRules</span>
+
+<span class="k">class</span> <span class="nc">Boot</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">boot</span> <span class="o">{</span>
+    <span class="nc">LiftRules</span><span class="o">.</span><span class="n">htmlProperties</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">set</span> <span class="o">{</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Req</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nc">XHtmlInHtml5OutProperties</span><span class="o">(</span><span class="n">r</span><span class="o">.</span><span class="n">userAgent</span><span class="o">)</span> <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>當我們使用以上的設定的時候，Lift 會以 xHTML 的 Parser 來解析模版，但是在輸出成網頁的時候，將其轉換成為 HTML5 的格式。</p>
+</div>
+</div>
+<div class="section" id="css-selector-binding">
+<h2>2.3. CSS Selector Binding<a class="headerlink" href="#css-selector-binding" title="Permalink to this headline">¶</a></h2>
+<p>上一節當中，我們看到了在 Lift 裡實作 Snippet 有兩種方式，第一種是透過操作傳入的 <tt class="docutils literal"><span class="pre">NodeSeq</span></tt> 節點，來直接回傳一個新的 <tt class="docutils literal"><span class="pre">NodeSeq</span></tt> 節點，讓 Lift 取代原有的 HTML 節點。</p>
+<p>但是多數的時候，直接操作 HTML 節點並不是那麼直覺，因此 Lift 提供了 CSS Selector Transforms，讓使用者使用 <a class="reference external" href="http://www.w3.org/TR/CSS2/selector.html">CSS Selector</a> 的方式來指定要如何處理模版中的 HTML 節點。</p>
+<p>當使用 CSS Selector 實作 Snippet 的時候，我們的 Snippet 函式的宣告格式如下：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">def</span> <span class="n">render</span><span class="k">:</span> <span class="kt">CssSel</span>
+</pre></div>
+</div>
+<p>我們可以看到，與原先的 <tt class="docutils literal"><span class="pre">def</span> <span class="pre">render(xhtml:</span> <span class="pre">NodeSeq):</span> <span class="pre">NodeSeq</span></tt> 不同，在這裡我們的 <tt class="docutils literal"><span class="pre">redner</span></tt> 函式沒有傳入值，而回傳值是一個 <a class="reference external" href="http://liftweb.net/api/25-rc1/api/#net.liftweb.util.CssSel">net.liftweb.util.CssSel</a> 物件。</p>
+<p>不過由於 <tt class="docutils literal"><span class="pre">CssSel</span></tt> 本身就是一個 <tt class="docutils literal"><span class="pre">NodeSeq</span> <span class="pre">=&gt;</span> <span class="pre">NodeSeq</span></tt> 的函式，也就是說 <tt class="docutils literal"><span class="pre">CssSel</span></tt> 可以接受一個 <tt class="docutils literal"><span class="pre">NodeSeq</span></tt> 物件並返回另一個 <tt class="docutils literal"><span class="pre">NodeSeq</span></tt> 物件，因此我們的 <tt class="docutils literal"><span class="pre">render</span></tt> 實際上是返回了另一個函式供 Lift 模版系統呼叫，將被標註的 HTML 節點傳入 <tt class="docutils literal"><span class="pre">CssSel</span></tt> 函式做處理，並以其回傳值取代原先的 HTML 節點。</p>
+</div>
+<div class="section" id="functional-programming-snippet">
+<h2>2.4. 以 Functional Programming 的角度來看 Snippet<a class="headerlink" href="#functional-programming-snippet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="immutable-data-structure">
+<h3>2.4.1. Immutable Data Structure<a class="headerlink" href="#immutable-data-structure" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id3">
+<h3>2.4.2. High-order Function<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="compsable-function">
+<h3>2.4.3. Compsable Function<a class="headerlink" href="#compsable-function" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>2.5. 內建的 Snippet 介紹<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">內容目錄</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Lift 模版系統基礎</a><ul>
+<li><a class="reference internal" href="#functional-programming">2.1. Functional Programming 一些常見的特性</a><ul>
+<li><a class="reference internal" href="#immutable-data-sturcture">2.1.1. Immutable Data Sturcture</a></li>
+<li><a class="reference internal" href="#high-order-function">2.1.2. High-order Function</a></li>
+<li><a class="reference internal" href="#composable-function">2.1.3. Composable Function</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">2.2. Lift 模版系統基本流程</a><ul>
+<li><a class="reference internal" href="#id2">2.2.1. 在模版中指定要呼叫的函式</a></li>
+<li><a class="reference internal" href="#snippet">2.2.2. 基本流程－－撰寫 Snippet 函式</a></li>
+<li><a class="reference internal" href="#xhtml-vs-html5">2.2.3. xHTML vs HTML5</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#css-selector-binding">2.3. CSS Selector Binding</a></li>
+<li><a class="reference internal" href="#functional-programming-snippet">2.4. 以 Functional Programming 的角度來看 Snippet</a><ul>
+<li><a class="reference internal" href="#immutable-data-structure">2.4.1. Immutable Data Structure</a></li>
+<li><a class="reference internal" href="#id3">2.4.2. High-order Function</a></li>
+<li><a class="reference internal" href="#compsable-function">2.4.3. Compsable Function</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">2.5. 內建的 Snippet 介紹</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一個主題</h4>
+  <p class="topless"><a href="FirstLiftApp.html"
+                        title="上一章">1. 從零開始建立第一個 Lift 程式</a></p>
+  <h3>本頁</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/BasicLiftTemplate.txt"
+           rel="nofollow">顯示原始碼</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>快速搜尋</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>瀏覽</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="總索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="FirstLiftApp.html" title="1. 從零開始建立第一個 Lift 程式"
+             >上一頁</a> |</li>
+        <li><a href="index.html">Lift Tutorial</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright Brian Hsu, 2013.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

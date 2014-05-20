@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1">
+
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Sync From Google Calendar"
+                  android:textColor="#FFFFFF"
+                  android:textSize="20sp"
+                  android:paddingBottom="10px"
+                  android:paddingTop="10px"/>
+
+        <EditText android:id="@+id/sync_username"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="Google Account"
+                  android:inputType="textEmailAddress"
+                  android:singleLine="true"/>
+    
+        <EditText android:id="@+id/sync_password"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="Password"
+                  android:password="true"
+                  android:singleLine="true"/>
+    
+        <CheckBox android:id="@+id/sync_remember"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Remember This"
+                  android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1.5">
+
+        <LinearLayout android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:layout_weight="1">
+    
+            <ImageView android:layout_width="fill_parent"
+                       android:layout_height="fill_parent"
+                       android:layout_weight="2"
+                       android:id="@+id/sync_maid" />
+    
+            <org.maidroid.reminder.ViewMessageBox 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/sync_message_box"/>
+    
+        </LinearLayout>
+        
+        <LinearLayout android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:layout_weight="2.3"
+                      android:paddingTop="5px"
+                      android:background="@drawable/background_gray">
+
+            <Button android:layout_width="fill_parent" 
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:id="@+id/sync_sync"
+                    android:text="Sync"/>
+
+            <Button android:layout_width="fill_parent" 
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:id="@+id/sync_cancel"
+                    android:text="Cancel"/>
+        
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

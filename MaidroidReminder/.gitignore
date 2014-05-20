@@ -1,0 +1,11 @@
+target/
+lib_managed/
+src_managed/
+project/boot/
+lib/
+project/build/target
+project/plugins/project/
+clean
+project/plugins/src_managed
+project/plugins/lib_managed
+project/plugins/target

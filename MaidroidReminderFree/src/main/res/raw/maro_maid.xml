@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maid id="maro">
+    <Welcome>
+        <Message bitmap="maro_smile" soundURI="sound01">お帰りなさいませ、御主人様。You may click the message to continue this dialog, my master.</Message>
+        <Message bitmap="maro_happy">It's my pleasure to service you.</Message>
+        <Message bitmap="maro_smile">Master could tell me your what's you plan, I will remind you when the time arrived. </Message>
+        <Message bitmap="maro_happy">Yes, may I help you? My master.</Message>
+    </Welcome>
+    <AddEvent>
+        <Message bitmap="maro_h_smile">Is there anything I could help you, master?</Message>
+        <Message bitmap="maro_h_happy">Please fell free to tell me.</Message>
+    </AddEvent>
+    <EditEvent>
+        <Message bitmap="maro_h_panic">What, the plan has changed? Please wait a minute...</Message>
+        <Message bitmap="maro_h_smile">So what is the latest plan, my master?</Message>
+    </EditEvent>
+
+    <AddButton>
+        <Message bitmap="maro_happy">May I help you, my master?</Message>
+        <Message bitmap="maro_smile">I will remind you when the time arrived, my master.</Message>
+    </AddButton>
+    <BrowseButton>
+        <Message bitmap="maro_smile">You may browse events that has told me at here.</Message>
+        <Message bitmap="maro_happy">Master could change your plan if you want to.</Message>
+    </BrowseButton>
+    <SettingButton>
+        <Message bitmap="maro_happy">Master could set how I service you by using these settings.</Message>
+        <Message bitmap="maro_shy">Is there anything I could help you?</Message>
+    </SettingButton>
+    <ExitButton>
+        <Message bitmap="maro_panic">Oops?! Why master leave so quickly? Did I do anything wrong?</Message>
+        <Message bitmap="maro_shy">Please feel free to call me anytime.</Message>
+    </ExitButton>
+
+    <NeedTitle bitmap="maro_h_panic">I'm sorry but title is required, my master.</NeedTitle>
+    <TimeWrong bitmap="maro_h_panic">Excuse me, my master. The date and time seems not correct.</TimeWrong>
+    <AddEventOK bitmap="maro_h_happy">OK, got it. I will remind you when time arrived, my master.</AddEventOK>
+    <TimeArrived bitmap="maro_h_smile" soundURI="sound02">Excuse me, it's about time. My master.</TimeArrived>
+    <DeleteConfirm bitmap="maro_h_smile">Does master really want to delete it?</DeleteConfirm>
+    <WhatShouldIDo bitmap="maro_h_smile">Yes, may I help you?</WhatShouldIDo>
+
+    <PreferenceWelcome>
+        <Message bitmap="maro_h_smile">Master could change how should maid service you here.</Message>
+        <Message bitmap="maro_h_shy">Please feel free to tell me how should I service you, my master.</Message>
+    </PreferenceWelcome>
+    <PreferenceVoice>
+        <Message bitmap="maro_h_happy">If master enable this option, I will greet to you when you open this application.</Message>
+        <Message bitmap="maro_h_shy">But it's a little embarrassing though...</Message>
+    </PreferenceVoice>
+    <PreferenceSound>
+        <Message bitmap="maro_h_happy">Should I remind you by using sound effect when time arrived?</Message>
+    </PreferenceSound>
+    <PreferenceVibration>
+        <Message bitmap="maro_h_smile">Should I vibrate the device when time arrived, my master?</Message>
+    </PreferenceVibration>
+
+    <TabWeek>
+        <Message bitmap="maro_h_smile">Here are events of this week. BTW, you may long click on an item to edit or delete it.</Message>
+        <Message bitmap="maro_h_happy">Master could change what events to brwose by switch tab at the top of screen.</Message>
+        <Message bitmap="maro_h_shy">You could also tell me to remember a new event by pressing MENU key.</Message>
+    </TabWeek>
+
+    <TabMonth>
+        <Message bitmap="maro_h_happy">Events that belong this this month is listed here. Is there anything I could help you?</Message>
+        <Message bitmap="maro_h_smile">Please don't push yourself too hard...</Message>
+    </TabMonth>
+    <TabAll>
+        <Message bitmap="maro_h_panic">Master want to check out all events? Please wait a moment...</Message>
+        <Message bitmap="maro_h_shy">I think all events are listed here, isn't it?</Message>
+    </TabAll>
+    <TabRepeat>
+        <Message bitmap="maro_h_happy">Here are events that master want me remind you regularly.</Message>
+        <Message bitmap="maro_h_smile">If master want to change it, you may long click on an item.</Message>
+    </TabRepeat>
+    <TabOutdated>
+        <Message bitmap="maro_h_happy">Here it the events that has outdated. Master could clear it by pressing MENU key.</Message>
+        <Message bitmap="maro_h_shy">BTW, these are all kind of memory between master and me, isn't it?</Message>
+    </TabOutdated>
+    <TabEventsCleared>
+        <Message bitmap="maro_h_smile">OK, I've cleared outdated events for you, master.</Message>
+        <Message bitmap="maro_h_happy">Please feel free to tell me if there anything I could help you.</Message>
+    </TabEventsCleared>
+    <ReminderMessage>
+        <Message bitmap="maro_h_shy">Excuse me, my master.</Message>
+        <Message bitmap="maro_h_happy">There is a event, please don't forget it.</Message>
+        <Message bitmap="maro_h_smile">
+        <![CDATA[
+            |Title:{title}
+            |Description:
+            |{description}
+        ]]>
+        </Message>
+        <Message bitmap="maro_h_smile">Please remember this, my master.</Message>
+    </ReminderMessage>
+    <ContextMenuMessage>
+        <Message bitmap="maro_h_smile">About "{title}"? Please wait a moment...</Message>
+        <Message bitmap="maro_h_smile">
+        <![CDATA[
+            |Title:{title}
+            |Description:
+            |{description}
+        ]]>
+        </Message>
+        <Message bitmap="maro_h_shy">May I help you, my master?</Message>
+    </ContextMenuMessage>
+    <ContextDeleteMessage>
+        <Message bitmap="maro_h_panic">Do you really want to delete "{title}"?</Message>
+        <Message bitmap="maro_h_shy">It could not be undo...</Message>
+    </ContextDeleteMessage>
+    <EventDetailMessage>
+        <Message bitmap="maro_h_happy">Does master mean "{title}"?</Message>
+        <Message bitmap="maro_h_smile">You instructued me remind you at {date} {time} the following things...</Message>
+        <Message bitmap="maro_h_smile">
+        <![CDATA[
+        |Title:{title}
+        |Description:
+        |{description}
+        ]]>
+        </Message>
+        <Message bitmap="maro_h_shy">Is that correct, master?</Message>
+    </EventDetailMessage>
+
+</Maid>

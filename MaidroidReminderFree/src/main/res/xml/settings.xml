@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="Settings">
+
+    <PreferenceCategory android:title="@string/voiceCategory">
+        <CheckBoxPreference android:title="@string/enableVoiceTitle"
+                            android:summary="@string/enableVoiceSummary"
+                            android:key="voice" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/notificationCategory">
+        <CheckBoxPreference android:title="@string/enableSoundTitle"
+                            android:defaultValue="true"
+                            android:key="notificationSound" />
+
+        <CheckBoxPreference android:title="@string/enableVibrationTitle"
+                            android:defaultValue="true"
+                            android:key="notificationVibration" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

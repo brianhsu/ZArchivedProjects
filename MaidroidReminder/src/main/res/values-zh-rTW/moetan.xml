@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Golabl Setting -->
+    <string name="moetan_name">小萌</string>
+
+    <!-- Remind Message -->
+    <string name="moetan_remind_1">主人，抱歉打擾了。</string>
+    <string name="moetan_remind_2">時間到了，請主人不要忘記以下的行程喲！</string>
+    <string name="moetan_remind_3">
+    <![CDATA[
+        |標題：%s\n
+        |內容：%s\n
+    ]]>
+    </string>
+
+    <!-- Add Item -->
+    <string name="moetan_add_item_1">如果有什麼事情的話，請主人儘管吩咐。</string>
+    <string name="moetan_add_item_2">小萌會先幫主人記住，等時間到了再提醒主人的。</string>
+
+    <!-- Edit Item -->
+    <string name="moetan_edit_item_1">主人想要更改行程嗎？隨時通知小萌都可以的。</string>
+    <string name="moetan_edit_item_2">請主人記得再次確認您行程的日期和時間喲！</string>
+
+    <!-- List Week -->
+    <string name="moetan_list_week_1">お帰りなさいませ、御主人様，小萌一直在等主人回來喲！</string>
+    <string name="moetan_list_week_2">這裡是主人這一個星期的行程，如果有什麼變動，隨時都可以通知小萌幫主人服務喲。</string>
+
+    <!-- List Month -->
+    <string name="moetan_list_month_1">這邊是主人這一整個月接下來的行程。</string>
+    <string name="moetan_list_month_2">時間到了小萌會再提醒主人的，請主人放心唄。</string>
+
+    <!-- List All -->
+    <string name="moetan_list_all_1">這邊是主人未來所有的行程，如果主人有什麼問題，請記得告訴小萌喲。</string>
+    <string name="moetan_list_all_2">小萌隨時都會幫主人記好最新的行程的。</string>
+
+    <!-- List Outdate -->
+    <string name="moetan_list_outdate_1">咦？主人想回顧過去的行程嗎？該不會是小萌忘記提醒主人什麼事了吧？</string>
+    <string name="moetan_list_outdate_2">如果主人想清除這些記錄的話，按下 Menu 鍵再選清除就可以了喲。</string>
+
+    <!-- About -->
+    <string name="moetan_about_1">我是小萌，只要主人交待的事，我都會好好記住的。</string>
+    <string name="moetan_about_2">我頭上的耳朵嗎？這是 PTT 上的 dicyia 幫我加上去的喲，很可愛唄？</string>
+    <string name="moetan_about_3">吶－－和米婭比起來，當然是我比較好對唄？</string>
+
+    <!-- Sync -->
+    <string name="moetan_sync_1">如果主人需要的話，小萌可以提醒主人在 Google 日曆上預定的事件喲！</string>
+    <string name="moetan_sync_2">只要主人告訴小萌一聲，小萌就會幫主人記下來的。</string>
+
+    <!-- Item Selected -->
+    <string name="moetan_item_select_first">好的，請主人稍候一會兒。</string>
+    <string name="moetan_item_select_no_desc">我記得是在 %d 的時候要提醒主人，這樣對嗎？</string>
+    <string name="moetan_item_select_desc_1">
+    <![CDATA[
+        |主人是吩附在 %s 的時候要提醒主人以下以事情：\n
+        |%s
+    ]]>
+    </string>
+    <string name="moetan_item_select_desc_2">請主人不要忘記了喲。</string>
+
+    <!-- Delete Item -->
+    <string name="moetan_delete_message">主人確定要刪除這個項目嗎？</string>
+    <string name="moetan_delete_title">刪除【%s】</string>
+
+
+    <!-- Others -->
+    <string name="moetan_toastOK">好的，小萌會照辦的。</string>
+    <string name="moetan_toastNoDisturb">那就不打擾主人囉。</string>
+    <string name="moetan_addItemNoTitle">主人忘了填標題了喔！</string>
+    <string name="moetan_addItemTimeError">主人好像把時間搞錯了呢。</string>
+    <string name="moetan_excuseMe">主人，抱歉打擾了！</string>
+    <string name="moetan_no_username">主人忘了填帳號耶！</string>
+    <string name="moetan_no_password">請主人記得告訴小萌密碼喲！</string>
+
+</resources>

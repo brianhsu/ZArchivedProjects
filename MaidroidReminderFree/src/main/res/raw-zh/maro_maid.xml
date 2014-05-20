@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maid id="maro">
+    <Welcome>
+        <Message bitmap="maro_smile" soundURI="sound01">お帰りなさいませ丶御主人様。提醒主人，按对话框能够继续哟！</Message>
+        <Message bitmap="maro_happy">很荣幸这次能为主人服务呢。</Message>
+        <Message bitmap="maro_smile">主人可以告诉我您的行程，我会在时间到的时候提醒主人哟！</Message>
+        <Message bitmap="maro_happy">是的，请问主人有什麽吩咐呢？</Message>
+    </Welcome>
+    <AddEvent>
+        <Message bitmap="maro_h_smile">请问主人有什麽吩咐呢？</Message>
+        <Message bitmap="maro_h_happy">请尽量和我说哟！</Message>
+    </AddEvent>
+    <EditEvent>
+        <Message bitmap="maro_h_panic">噫！主人要更动行程吗？请稍候一下哟。</Message>
+        <Message bitmap="maro_h_smile">请问主人新的行程是……？</Message>
+    </EditEvent>
+
+    <AddButton>
+        <Message bitmap="maro_happy">请问主人接下来有什麽吩咐呢？</Message>
+        <Message bitmap="maro_smile">只要主人告知您的行程，时间到了我会提醒主人哟！</Message>
+    </AddButton>
+    <BrowseButton>
+        <Message bitmap="maro_smile">主人需要改变行事历的设定吗？</Message>
+        <Message bitmap="maro_happy">或是主人想要看所有的行程呢？</Message>
+    </BrowseButton>
+    <SettingButton>
+        <Message bitmap="maro_happy">这里可以调整相关的设定哟。</Message>
+        <Message bitmap="maro_shy">请问有什麽吩咐吗？</Message>
+    </SettingButton>
+    <ExitButton>
+        <Message bitmap="maro_panic">咦？！主人这麽快要离开了吗</Message>
+        <Message bitmap="maro_shy">如果有什麽事的话，都可以再吩咐我喔。</Message>
+    </ExitButton>
+
+    <NeedTitle bitmap="maro_h_panic">主人好像忘记告诉我行程的标题了呢！</NeedTitle>
+    <TimeWrong bitmap="maro_h_panic">对不起，可是这样的时间好像怪怪的耶</TimeWrong>
+    <AddEventOK bitmap="maro_h_happy">好的，我记下来了。时间到我会提醒主人的。</AddEventOK>
+    <TimeArrived bitmap="maro_h_smile" soundURI="sound02">抱歉打扰了，主人您有新的行程哟！</TimeArrived>
+    <DeleteConfirm bitmap="maro_h_smile">请问主人确定要删除吗？</DeleteConfirm>
+    <WhatShouldIDo bitmap="maro_h_smile">是的，请问主人有什麽吩咐？</WhatShouldIDo>
+
+    <PreferenceWelcome>
+        <Message bitmap="maro_h_smile">主人可以在这里吩咐妺斗要怎麽样服侍主人哟。</Message>
+        <Message bitmap="maro_h_shy">请问主人有什麽吩咐呢？</Message>
+    </PreferenceWelcome>
+    <PreferenceVoice>
+        <Message bitmap="maro_h_happy">打开这个选项的话，程式启动时妺斗会用招呼语问候主人哟。</Message>
+        <Message bitmap="maro_h_shy">不过主人最好要有相当程度的耻力再打开这个选项呢……</Message>
+    </PreferenceVoice>
+    <PreferenceSound>
+        <Message bitmap="maro_h_happy">请问主人时间到的时候，需要以语音提醒主人吗？</Message>
+    </PreferenceSound>
+    <PreferenceVibration>
+        <Message bitmap="maro_h_smile">启用这个选项的话，妺斗会在时间到的时候，以震动提醒主人哟！</Message>
+    </PreferenceVibration>
+
+    <TabWeek>
+        <Message bitmap="maro_h_smile">这是主人这一周的行程哟，提醒主人，如果要删除会修改行程，请在行程上长按就可以罗！</Message>
+        <Message bitmap="maro_h_happy">另外主人也可以切换要看哪些类别的行程喔。</Message>
+        <Message bitmap="maro_h_shy">如果主人有需要的话，也随时可以按下 Menu 键告诉我主人接下来的行程哟。</Message>
+    </TabWeek>
+
+    <TabMonth>
+        <Message bitmap="maro_h_happy">主人这个月的行程都在上面了，如果有任何问题，都请再告诉我哟。</Message>
+        <Message bitmap="maro_h_smile">也请主人不要太勉强，把身体搞坏罗。</Message>
+    </TabMonth>
+    <TabAll>
+        <Message bitmap="maro_h_panic">主人要看全部的行程吗？请稍候一下哟……</Message>
+        <Message bitmap="maro_h_shy">应该是这样没错吧？请主人核对一下有没有什麽错误哟。</Message>
+    </TabAll>
+    <TabRepeat>
+        <Message bitmap="maro_h_happy">这边是主人要求在固定的时间提醒主人的事项呢。</Message>
+        <Message bitmap="maro_h_smile">如果主人想要修改或删除的话，请在行程上长按就可以罗。</Message>
+    </TabRepeat>
+    <TabOutdated>
+        <Message bitmap="maro_h_happy">这边是曾经提醒过主人的事项呢，如果主人觉得已经不需要的话，可以按 Menu 键来清除喔。</Message>
+        <Message bitmap="maro_h_shy">是说看着看着，就觉得充满了和主人的回忆……</Message>
+    </TabOutdated>
+    <TabEventsCleared>
+        <Message bitmap="maro_h_smile">好的，已经替主人清除过期的行程了。</Message>
+        <Message bitmap="maro_h_happy">如果还有其他事情，请尽量吩咐哟！</Message>
+    </TabEventsCleared>
+    <ReminderMessage>
+        <Message bitmap="maro_h_shy">主人，抱歉打扰了。</Message>
+        <Message bitmap="maro_h_happy">您有新的行程，请不要忘记了哟！</Message>
+        <Message bitmap="maro_h_smile">
+        <![CDATA[
+            |标题：{title}
+            |内容：
+            |{description}
+        ]]>
+        </Message>
+        <Message bitmap="maro_h_smile">请主人务必要记得哟。</Message>
+        
+    </ReminderMessage>
+    <ContextMenuMessage>
+        <Message bitmap="maro_h_smile">主人是说关於【{title}】的事吗？请主人稍候一下哟……</Message>
+        <Message bitmap="maro_h_smile">
+        <![CDATA[
+            |标题：{title}
+            |内容：
+            |{description}
+        ]]>
+        </Message>
+        <Message bitmap="maro_h_shy">请问主人有其他吩咐吗？</Message>
+    </ContextMenuMessage>
+    <ContextDeleteMessage>
+        <Message bitmap="maro_h_panic">请问主人确定要删除【{title}】吗？</Message>
+        <Message bitmap="maro_h_shy">一但删除就无法回复了哟……</Message>
+    </ContextDeleteMessage>
+    <EventDetailMessage>
+        <Message bitmap="maro_h_happy">主人是说关於【{title}】的事吗？</Message>
+        <Message bitmap="maro_h_smile">主人是吩咐我在 {date} 那天的 {time} 时候提醒主人下面的事……</Message>
+        <Message bitmap="maro_h_smile">
+        <![CDATA[
+        |标题：{title}
+        |内容：
+        |{description}
+        ]]>
+        </Message>
+        <Message bitmap="maro_h_shy">应该是这样没错吧？</Message>
+    </EventDetailMessage>
+
+</Maid>

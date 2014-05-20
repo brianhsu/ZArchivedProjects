@@ -1,0 +1,1149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-15 14:32+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main/scala/Dialog/ProjectDialog.scala:43
+#: src/main/scala/Dialog/StuffDialog.scala:42
+msgid "Add stuff"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:66
+#: src/main/scala/Dialog/ActionDialog.scala:87
+#: src/main/scala/Dialog/ReferenceDialog.scala:61
+#: src/main/scala/Dialog/MaybeDialog.scala:66
+#: src/main/scala/Dialog/StuffDialog.scala:64
+msgid "Ttile"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:66
+#: src/main/scala/Dialog/ProcessDialog.scala:476
+#: src/main/scala/Dialog/ProcessDialog.scala:672
+#: src/main/scala/Dialog/ActionDialog.scala:87
+#: src/main/scala/Dialog/ActionDialog.scala:108
+#: src/main/scala/Dialog/MaybeDialog.scala:66
+#: src/main/scala/Dialog/StuffDialog.scala:64
+msgid "Required"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:67
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:79
+#: src/main/scala/GTDTabFolder/InboxTab.scala:62
+#: src/main/scala/GTDTabFolder/ActionTab.scala:52
+#: src/main/scala/GTDTabFolder/ActionTab.scala:67
+#: src/main/scala/GTDTabFolder/ActionTab.scala:82
+#: src/main/scala/GTDTabFolder/ActionTab.scala:97
+#: src/main/scala/GTDTabFolder/ActionTab.scala:112
+#: src/main/scala/Dialog/ProcessDialog.scala:673
+#: src/main/scala/PreferenceWindow.scala:86
+#: src/main/scala/Dialog/ActionDialog.scala:88
+#: src/main/scala/Dialog/ReferenceDialog.scala:62
+#: src/main/scala/Dialog/MaybeDialog.scala:67
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:58
+#: src/main/scala/Dialog/StuffDialog.scala:65
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:59
+msgid "Topic"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:68
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:79
+msgid "Vision"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:69
+#: src/main/scala/Dialog/ProcessDialog.scala:674
+#: src/main/scala/Dialog/ActionDialog.scala:93
+#: src/main/scala/Dialog/ActionDialog.scala:94
+#: src/main/scala/Dialog/ReferenceDialog.scala:63
+#: src/main/scala/Dialog/ReferenceDialog.scala:64
+#: src/main/scala/Dialog/MaybeDialog.scala:68
+#: src/main/scala/Dialog/MaybeDialog.scala:69
+#: src/main/scala/Dialog/StuffDialog.scala:66
+msgid "Description"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:73
+#: src/main/scala/Dialog/ProcessDialog.scala:106
+#: src/main/scala/Dialog/ProcessDialog.scala:160
+#: src/main/scala/Dialog/ProcessDialog.scala:231
+#: src/main/scala/Dialog/ProcessDialog.scala:316
+#: src/main/scala/Dialog/ProcessDialog.scala:394
+#: src/main/scala/Dialog/ProcessDialog.scala:488
+#: src/main/scala/Dialog/ProcessDialog.scala:592
+#: src/main/scala/Dialog/ActionDialog.scala:142
+#: src/main/scala/Dialog/ReferenceDialog.scala:67
+#: src/main/scala/Dialog/MaybeDialog.scala:74
+#: src/main/scala/Dialog/StuffDialog.scala:73
+msgid "Cancel"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:74
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:65
+#: src/main/scala/GTDTabFolder/InboxTab.scala:68
+#: src/main/scala/Dialog/StuffDialog.scala:75
+msgid "Add"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:158
+msgid "Edit Project"
+msgstr ""
+
+#: src/main/scala/Dialog/ProjectDialog.scala:160
+#: src/main/scala/Dialog/ActionDialog.scala:143
+#: src/main/scala/Dialog/ReferenceDialog.scala:68
+#: src/main/scala/Dialog/MaybeDialog.scala:75
+#: src/main/scala/Dialog/StuffDialog.scala:166
+msgid "Edit"
+msgstr ""
+
+#: src/main/scala/MainWindow.scala:88
+msgid "GTDDesktop"
+msgstr ""
+
+#: src/main/scala/MainWindow.scala:148
+msgid "Maidroid Loading..."
+msgstr ""
+
+#: src/main/scala/MainWindow.scala:223
+msgid "Show / Hide"
+msgstr ""
+
+#: src/main/scala/MainWindow.scala:228
+#: src/main/scala/PreferenceWindow.scala:120
+msgid "Preference"
+msgstr ""
+
+#: src/main/scala/MainWindow.scala:233
+msgid "Exit"
+msgstr ""
+
+#: src/main/scala/MainWindow.scala:236
+msgid "MaidroidGTD"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:40
+#: src/main/scala/GTDTabFolder/ActionTab.scala:52
+#: src/main/scala/GTDTabFolder/ActionTab.scala:67
+#: src/main/scala/GTDTabFolder/ActionTab.scala:82
+#: src/main/scala/GTDTabFolder/ActionTab.scala:97
+#: src/main/scala/GTDTabFolder/ActionTab.scala:112
+#: src/main/scala/Dialog/ActionDialog.scala:91
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:122
+msgid "Project"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:66
+#: src/main/scala/GTDTabFolder/InboxTab.scala:69
+#: src/main/scala/GTDTabFolder/ActionTab.scala:130
+#: src/main/scala/PreferenceWindow.scala:78
+#: src/main/scala/PreferenceWindow.scala:90
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:65
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:65
+msgid "Remove"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:67
+#: src/main/scala/GTDTabFolder/ActionTab.scala:131
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:66
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:66
+msgid "Reprocess"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:73
+#: src/main/scala/GTDTabFolder/InboxTab.scala:77
+#: src/main/scala/GTDTabFolder/ActionTab.scala:137
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:71
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:71
+msgid "Search"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ProjectTab.scala:79
+#: src/main/scala/GTDTabFolder/InboxTab.scala:62
+#: src/main/scala/GTDTabFolder/ActionTab.scala:52
+#: src/main/scala/GTDTabFolder/ActionTab.scala:68
+#: src/main/scala/GTDTabFolder/ActionTab.scala:83
+#: src/main/scala/GTDTabFolder/ActionTab.scala:98
+#: src/main/scala/GTDTabFolder/ActionTab.scala:113
+#: src/main/scala/Dialog/ProcessDialog.scala:672
+#: src/main/scala/PreferenceWindow.scala:76
+#: src/main/scala/PreferenceWindow.scala:88
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:58
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:59
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:170
+msgid "Title"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/InboxTab.scala:40
+msgid "Inbox"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/InboxTab.scala:70
+msgid "Process"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/InboxTab.scala:71
+msgid "Receive Mail"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/InboxTab.scala:202
+#, c-format
+msgid "[Tickle %s] %s"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:43
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:93
+msgid "Action"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:48
+msgid "All"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:51
+#: src/main/scala/GTDTabFolder/ActionTab.scala:66
+#: src/main/scala/GTDTabFolder/ActionTab.scala:81
+#: src/main/scala/GTDTabFolder/ActionTab.scala:96
+#: src/main/scala/GTDTabFolder/ActionTab.scala:108
+#: src/main/scala/GTDTabFolder/ActionTab.scala:111
+#: src/main/scala/Dialog/ProcessDialog.scala:387
+#: src/main/scala/Dialog/ProcessDialog.scala:480
+#: src/main/scala/Dialog/ProcessDialog.scala:584
+msgid "Done"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:51
+#: src/main/scala/GTDTabFolder/ActionTab.scala:66
+#: src/main/scala/GTDTabFolder/ActionTab.scala:81
+#: src/main/scala/GTDTabFolder/ActionTab.scala:96
+#: src/main/scala/GTDTabFolder/ActionTab.scala:111
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:58
+msgid "Create Date"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:52
+#: src/main/scala/GTDTabFolder/ActionTab.scala:67
+#: src/main/scala/GTDTabFolder/ActionTab.scala:82
+#: src/main/scala/GTDTabFolder/ActionTab.scala:97
+#: src/main/scala/GTDTabFolder/ActionTab.scala:112
+#: src/main/scala/PreferenceWindow.scala:74
+#: src/main/scala/Dialog/ActionDialog.scala:89
+msgid "Context"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:53
+#: src/main/scala/GTDTabFolder/ActionTab.scala:83
+msgid "Delegated To"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:53
+#: src/main/scala/GTDTabFolder/ActionTab.scala:98
+msgid "Scheduled Date"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:63
+#: src/main/scala/Dialog/ProcessDialog.scala:151
+#: src/main/scala/Dialog/ActionDialog.scala:151
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:126
+msgid "Do ASAP"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:78
+#: src/main/scala/Dialog/ProcessDialog.scala:152
+#: src/main/scala/Dialog/ActionDialog.scala:152
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:130
+msgid "Delegated"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:83
+msgid "Follow up"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:93
+#: src/main/scala/Dialog/ProcessDialog.scala:153
+#: src/main/scala/Dialog/ActionDialog.scala:153
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:134
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:170
+msgid "Scheduled"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:132
+msgid "Mail"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ActionTab.scala:133
+#: src/main/scala/Dialog/ActionDialog.scala:111
+msgid "Follow Up"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:98
+msgid "Yes, it is actionable"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:99
+msgid "No, it is not actionable"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:103
+#: src/main/scala/Dialog/ProcessDialog.scala:157
+#: src/main/scala/Dialog/ProcessDialog.scala:228
+#: src/main/scala/Dialog/ProcessDialog.scala:313
+#: src/main/scala/Dialog/ProcessDialog.scala:391
+#: src/main/scala/Dialog/ProcessDialog.scala:485
+#: src/main/scala/Dialog/ProcessDialog.scala:589
+msgid "Prev"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:104
+#: src/main/scala/Dialog/ProcessDialog.scala:158
+#: src/main/scala/Dialog/ProcessDialog.scala:229
+#: src/main/scala/Dialog/ProcessDialog.scala:314
+#: src/main/scala/Dialog/ProcessDialog.scala:392
+#: src/main/scala/Dialog/ProcessDialog.scala:486
+#: src/main/scala/Dialog/ProcessDialog.scala:590
+msgid "Next"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:105
+#: src/main/scala/Dialog/ProcessDialog.scala:159
+#: src/main/scala/Dialog/ProcessDialog.scala:230
+#: src/main/scala/Dialog/ProcessDialog.scala:315
+#: src/main/scala/Dialog/ProcessDialog.scala:393
+#: src/main/scala/Dialog/ProcessDialog.scala:487
+#: src/main/scala/Dialog/ProcessDialog.scala:591
+msgid "Finish"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:149
+msgid "Expected Successful outcome:"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:218
+msgid "Delete"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:223
+msgid "Someday / Maybe"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:224
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:39
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:113
+msgid "Reference"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:300
+#: src/main/scala/Dialog/MaybeDialog.scala:70
+msgid "Tickle me at"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:385
+#: src/main/scala/Dialog/ProcessDialog.scala:478
+#: src/main/scala/Dialog/ProcessDialog.scala:577
+msgid "Context:"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:386
+#: src/main/scala/Dialog/ProcessDialog.scala:479
+#: src/main/scala/Dialog/ProcessDialog.scala:578
+msgid "Project:"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:476
+msgid "Delegated:"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:477
+msgid "Email:"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:579
+msgid "Date:"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:581
+msgid "Duration:"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:582
+msgid "Location:"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:669
+msgid "Process Stuff"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:671
+msgid "Info"
+msgstr ""
+
+#: src/main/scala/Dialog/ProcessDialog.scala:675
+#: src/main/scala/Dialog/StuffDialog.scala:68
+msgid "Stuff Description"
+msgstr ""
+
+#: src/main/scala/Maid/UI.scala:176
+msgid "Show/Hide"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:44
+msgid "Username:"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:45
+msgid "Password:"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:46
+msgid "POP3 Server:"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:47
+msgid "Port:"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:48
+msgid "Use SSL Connection"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:49
+msgid "Check mail at every "
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:51
+msgid "Check mail at start"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:55
+msgid "Command:"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:61
+msgid "Mail Server"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:65
+msgid "Mail Client"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:126
+msgid "OK"
+msgstr ""
+
+#: src/main/scala/PreferenceWindow.scala:127
+msgid "Close"
+msgstr ""
+
+#: src/main/scala/POP3Receiver.scala:151
+msgid "POP3 Mail server is not configured correctly"
+msgstr ""
+
+#: src/main/scala/POP3Receiver.scala:186
+msgid "==> Start receive mail"
+msgstr ""
+
+#: src/main/scala/POP3Receiver.scala:200
+msgid "==> received mail:"
+msgstr ""
+
+#: src/main/scala/POP3Receiver.scala:203
+msgid "==> Done"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:43
+msgid "Edit Action"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:95
+msgid "Type"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:96
+msgid "Successful Outcome"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:107
+msgid "Deleaged To"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:109
+msgid "EMail"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:116
+msgid "Date/Time"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:127
+msgid "Duration"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:132
+msgid "minutes"
+msgstr ""
+
+#: src/main/scala/Dialog/ActionDialog.scala:133
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:170
+msgid "Location"
+msgstr ""
+
+#: src/main/scala/Dialog/ReferenceDialog.scala:39
+msgid "Edit Reference"
+msgstr ""
+
+#: src/main/scala/Dialog/ReferenceDialog.scala:61
+msgid "Stuff Title"
+msgstr ""
+
+#: src/main/scala/Dialog/MaybeDialog.scala:41
+msgid "Edit Maybe"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:39
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:107
+msgid "Maybe"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:59
+msgid "Tickle Date"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:87
+#: src/main/scala/GTDTabFolder/MaybeTab.scala:101
+msgid "None"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:54
+msgid "Here's the overview the master's work and some tips about GTD."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:55
+msgid ""
+"If master feels hard to make your mind about something, you could switch "
+"back to this page and think about it again."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:60
+#, c-format
+msgid "There are about %d items that master have not decide how to handle it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:61
+msgid ""
+"I think it is great if master could find sometime and make descision about "
+"these item."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:62
+msgid ""
+"If there is anything that need to be noted, please click the plus button on "
+"the tool bar."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:67
+msgid "Master, here is the stuff that is actionable or already done."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:68
+msgid "Working hard is good, but please take care of yourself, my master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:69
+msgid "I will be sad if master is sick beacuse of hard working."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:74
+msgid "Here is things that master does not make up your mind yet."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:75
+msgid ""
+"It is really hard to make a decision sometimes, but I think master should "
+"review these thing if you have time."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:76
+msgid "So...sorry! I should not criticize master..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:81
+msgid "Does master want to get some reference file?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:82
+msgid ""
+"Master could tell me what you need to find, I will search it for master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:83
+msgid "Because I'm more familiar with how reference is filed than master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:88
+msgid "Here is the project master currently has..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:89
+msgid ""
+"Just for your information, master could drag and drop the actions to "
+"rearrange the project of actions."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:95 src/main/scala/Maid/Model.scala:101
+msgid "Yes, may I help you?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:99
+msgid "りなさいませ、ご主人さま。Master could click the dialog to continue."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:100
+msgid "If master wish me to do something, please click on me."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:106
+msgid "Master, I could not retrieve the mail from server..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:107
+msgid "Here is the problem:\n"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:112
+msgid "Does master want to edit this action? Please feel free to tell me."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:113
+msgid "Cancel it? OK, I got it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:114
+msgid "OK, it is updated!"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:120
+msgid "OK, when should I put this item back into Inbox, My master?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:124
+msgid "There is no need to remind master about this item? OK, I got it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:125
+msgid "Does master want to edit this item? I got it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:126
+msgid "Master want to remain this item? OK, as your wish."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:128
+msgid "It is already updated..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:129
+msgid "Master could check it again."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:136
+#, c-format
+msgid "My master does '%s' could be achieved by some real action?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:137
+msgid ""
+"If it is actionable, could be delegated to someone else or is already "
+"scheduled, please select 'It is Actionable'"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:138
+msgid ""
+"If this item could not take a action, please select 'It is not actionable'."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:143
+msgid ""
+"Excuse me, what is the expected outcome of this item? And what to do next, "
+"my master?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:144
+msgid ""
+"Just for your information, you could also delegeted this item to someone "
+"else."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:145
+msgid "If this is a appointment, please selected 'Scheduled'"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:150
+msgid "This item is not actionable? OK, I got it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:151
+msgid "Please tell me should I delete it or keep it as reference."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:152
+msgid ""
+"If this item could become an action later, please select 'Someday/Maybe'."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:157
+msgid ""
+"If master want me to remind you about this item later, please free to tell "
+"me."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:158
+msgid ""
+"Just check the 'Tickle me' box, and set the date, I will put this item back "
+"into Inbox when the date is arrived."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:163
+msgid ""
+"Master, if this action could be done in two minutes, it is better to do it "
+"right now."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:164
+msgid "If this action could not be done in two minutes, you could defer it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:169
+msgid "Please tell me who to delegate this action."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:170
+msgid "Master, please rember that delegated action need to follow up."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:175
+msgid "This item has been scheduled?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:176
+msgid ""
+"Please tell me specific date time, I would remind you when the time is "
+"arrived, my master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:183
+msgid "Need to update this reference?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:184
+msgid "Please feel free to tell me."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:188
+msgid "OK, I've updated content of this reference."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:189
+msgid "Master want to keep the origin version? I got it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:194
+msgid "Vision means the final goal of this project."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:195
+msgid "Because there is a vision, so we could know what to looking after!"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:199
+msgid "Does master wish to cancel it? OK, I will do that for you."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:201
+msgid "Ahh... Please tell me what project master want to add."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:202
+msgid "Project is used to keep track a group of action."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:203
+msgid ""
+"You could assign actions to project, and track the status of actions under "
+"it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:208
+msgid "Is this project need to be updated?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:209
+msgid "If master have any request, please feel free to tell me."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:214
+#, c-format
+msgid "Master, I've already add '%s' to the project list."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:215
+msgid "You may assign the corresponding project when adding "
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:220
+msgid ""
+"I've already updated this project for you. Master could check it out in the "
+"list."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:227
+msgid "My master, this field is required. So we could know what it is."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:228
+msgid "If there is any request, please feel free to tell me."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:233
+msgid "Master, what topic does this item belong?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:234
+msgid ""
+"If there is no apporitate topic in the list, you could enter new topic "
+"directly."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:239
+msgid ""
+"If there is something need to be noted, please tell me using this field."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:243
+msgid "OK, I've remembered this item, my master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:244
+msgid ""
+"Please remember to determine what to do about this item if you have time, my "
+"master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:249
+msgid "OK, I got it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:250
+msgid "If master have any other request, please feel free to tell me."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:254
+msgid "I've updated the status of this item, my master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:262 src/main/scala/Maid/Model.scala:357
+#: src/main/scala/Maid/Model.scala:385 src/main/scala/Maid/Model.scala:453
+#: src/main/scala/Maid/Model.scala:492
+msgid "It seems there is no notes..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:266
+#, c-format
+msgid "Master, '%s' should be done as soon as possible."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:267
+msgid ""
+"Here is the description:\n"
+"\n"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:272
+msgid "Excuse me, my master"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:273
+msgid "I could not start mail client, is the setting correct?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:278
+msgid "It seems master does not set EMail client yet..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:279
+msgid "Master could set it in Preference window."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:286
+#, c-format
+msgid "My master, action '%s' has been delegated to %s."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:287
+#, c-format
+msgid ""
+"Delegated:%s\n"
+"E-Mail:%s\n"
+"Description:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:297 src/main/scala/Maid/Model.scala:417
+#, c-format
+msgid "Master, action '%s' has been scheduled at %s, please don't forget."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:298 src/main/scala/Maid/Model.scala:418
+#, c-format
+msgid ""
+"Location:%s\n"
+"Description:\n"
+"%s"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:303 src/main/scala/Maid/Model.scala:442
+msgid "This action has been done? OK, I will mark it as done."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:304
+msgid "Master could be the 'Done' tab to check it out."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:309
+msgid "Does master want to delete this action?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:310
+msgid "OK, it has been deleted."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:315 src/main/scala/Maid/Model.scala:398
+#: src/main/scala/Maid/Model.scala:472 src/main/scala/Maid/Model.scala:506
+#, c-format
+msgid "Does master want to reprocess '%s'?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:316 src/main/scala/Maid/Model.scala:399
+#: src/main/scala/Maid/Model.scala:473 src/main/scala/Maid/Model.scala:507
+msgid "As your wish, I will put it into inbox, master could process it later."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:321 src/main/scala/Maid/Model.scala:444
+msgid "This action need to mark as not done again?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:322 src/main/scala/Maid/Model.scala:445
+msgid "OK, I got it. If there is any request, please feel free to tell me."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:328 src/main/scala/Maid/Model.scala:367
+#: src/main/scala/Maid/Model.scala:405 src/main/scala/Maid/Model.scala:479
+#: src/main/scala/Maid/Model.scala:513
+msgid ""
+"Are you searching for this? If not, please hit enter to show next item that "
+"is matched."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:331 src/main/scala/Maid/Model.scala:370
+#: src/main/scala/Maid/Model.scala:408 src/main/scala/Maid/Model.scala:482
+#: src/main/scala/Maid/Model.scala:516
+msgid "Master, excuse me, it seems there is no matched item..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:334
+msgid "Master want mail to the delegated person? Please wait a minute..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:335
+msgid "Exceuse me, my master...It seems there is no e-mail address."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:337
+msgid "OK, I've updated the follow-up time."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:338
+msgid "Please remember keep track of this item until it is done."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:342
+msgid "Excuse me, my master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:343
+msgid "You could only set follow-up time for delegated item."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:351
+#, c-format
+msgid "I've deleted '%s', my master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:356 src/main/scala/Maid/Model.scala:384
+#: src/main/scala/Maid/Model.scala:452 src/main/scala/Maid/Model.scala:491
+msgid ""
+"Master said:\n"
+"\n"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:360
+#, c-format
+msgid "About '%s'? Please wait a minute..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:374
+msgid "Master want to check mail box? OK, I got it."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:375
+msgid ""
+"I will put the mail into inbox when it is ready, master could do something "
+"else when I process these mails."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:388 src/main/scala/Maid/Model.scala:456
+#: src/main/scala/Maid/Model.scala:495
+#, c-format
+msgid "About '%s'? Let me see..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:394
+#, c-format
+msgid "OK, I've deleted '%s' for you, my master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:426
+#, c-format
+msgid "OK, I've add action '%s' into project '%s'."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:427
+msgid "Is there any request?"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:432
+msgid "OK, I've mark this project as done. My master."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:433
+msgid ""
+"Just for your information, if master add action not has been done into this "
+"project, this project will automatically mark as not done again."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:436
+msgid "OK, this project has been mark as not done again."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:438
+msgid "Master, you need finish all actions in the project first."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:439
+msgid ""
+"If actions in the project is not mark as done, this check box will not work."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:465
+#, c-format
+msgid "About project '%s'? Let me see..."
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:466
+#, c-format
+msgid ""
+"Vision:%s\n"
+"Description:\n"
+"%s"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:470
+msgid "OK, I've deleted it!"
+msgstr ""
+
+#: src/main/scala/Maid/Model.scala:501
+#, c-format
+msgid "OK, I've delete '%s'."
+msgstr ""
+
+#: src/main/scala/Dialog/StuffDialog.scala:164
+msgid "Edit Stuff"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/ReferenceTab.scala:59
+msgid "Date"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:42
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:152
+msgid "Overview"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:84
+msgid "Collect all stuff into inbox"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:100
+msgid "What is it? Is it actionable?"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:145
+msgid "GTD Process"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:146
+msgid "1. Collect"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:147
+msgid "2. Process"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:148
+msgid "3. Review"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:153
+msgid "Stuff:"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:155
+msgid "Actions:"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:158
+msgid "Projects:"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:162
+msgid "Recent Date"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:321
+msgid "1 week"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:322
+msgid "2 weeks"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:323
+msgid "3 weeks"
+msgstr ""
+
+#: src/main/scala/GTDTabFolder/OverviewTab.scala:324
+msgid "1 month"
+msgstr ""

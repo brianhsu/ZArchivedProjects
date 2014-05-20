@@ -1,0 +1,543 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. 從零開始建立第一個 Lift 程式 &mdash; Lift Tutorial</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2012.03',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Lift Tutorial" href="index.html" />
+    <link rel="next" title="2. Lift 模版系統基礎" href="BasicLiftTemplate.html" />
+    <link rel="prev" title="開始之前" href="BeforeStart.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>瀏覽</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="總索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="BasicLiftTemplate.html" title="2. Lift 模版系統基礎"
+             accesskey="N">下一頁</a> |</li>
+        <li class="right" >
+          <a href="BeforeStart.html" title="開始之前"
+             accesskey="P">上一頁</a> |</li>
+        <li><a href="index.html">Lift Tutorial</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="lift">
+<h1>1. 從零開始建立第一個 Lift 程式<a class="headerlink" href="#lift" title="Permalink to this headline">¶</a></h1>
+<p>Lift 並沒有預設的建置環境，並且使用標準的 Maven 格式發佈函式庫 JAR 檔，以及可以運行在標準的 Java Web Container 上，因此你可以使任何的建置系統與 Web Container 來做為開發的環境。</p>
+<p>在這個 Tutorial 中，我們會使用在 Scala 社群中最常使用的 <a class="reference external" href="http://www.scala-sbt.org/">SBT</a> 建置系統以及其使用 <a class="reference external" href="http://www.eclipse.org/jetty/">Jetty</a> 做為 Web Container 的 <a class="reference external" href="https://github.com/JamesEarlDouglas/xsbt-web-plugin">SBT Web Plugin</a> 來當做開發環境。</p>
+<div class="section" id="id1">
+<h2>1.1. 前置需求<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>由於不論是 Scala / Lift 或是我們所使用的 SBT 建置系統，均使用 Java Virtual Machine 做為執行環境，因此您至少要有 Java 1.5 以上的 Java 執行環境。</p>
+<p>若您不確定您是否有合適的 Java 執行環境，或者目前所使用的版本，您可以在您的終端機視窗（若是在 Windows 上的話就是命令提示字元）輸入下列指令：</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">java -version</span>
+</pre></div>
+</div>
+<p>若您的機器上有安裝 Java 執行環境的話，您應該會看到類似下列的訊息，告知您目前您所使用的 Java 環境版本，只要第一行的版本是 1.5 以上就可以了。</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">java version &quot;1.7.0_17&quot;</span>
+<span class="go">Java(TM) SE Runtime Environment (build 1.7.0_17-b02)</span>
+<span class="go">Java HotSpot(TM) 64-Bit Server VM (build 23.7-b01, mixed mode)</span>
+</pre></div>
+</div>
+<p>若您發現出現錯誤訊息，很有可能是因為您並未正確地安裝 Java 執行環境，您可以到 <a class="reference external" href="http://java.com">Java 官方網站</a>下載並依照指示安裝 Java 執行環境。</p>
+</div>
+<div class="section" id="sbt">
+<h2>1.2. 安裝 SBT 與建立基本專案目錄<a class="headerlink" href="#sbt" title="Permalink to this headline">¶</a></h2>
+<p>SBT 是 Simple Build Tool 的簡稱，是目前在 Scala 生態系統中相當成熟並且受歡迎的建置系統。由於 SBT 本身就支援引入 Maven 套件庫裡的函式庫，因此使用 SBT 可以讓我們更快速地來建置我們的專案，並省去自行維護相依性的工作。</p>
+<div class="section" id="id2">
+<h3>1.2.1. 安裝 SBT 建置系統<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>在這一小節，我們會介紹如何安裝 SBT，在這份文件中我們會以 SBT 0.12.3 做為我們的建置系統。</p>
+<p>首先，請依下列的步驟執行：</p>
+<ol class="arabic simple">
+<li>連線至 <a class="reference external" href="http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html">SBT Download</a> 頁面</li>
+<li>依照您的作業系統下載並按上述網頁的指示安裝 SBT</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>若您的作業系統是 Linux / MacOS，您可以直接下載 <a class="reference external" href="http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt//0.12.3/sbt.tgz">TGZ</a> 檔案，並將其解壓縮到 <tt class="docutils literal"><span class="pre">/opt</span></tt> 後把 <tt class="docutils literal"><span class="pre">/opt/sbt/bin</span></tt> 加入您的 <tt class="docutils literal"><span class="pre">PATH</span></tt> 環境變數中即可。</li>
+<li>若您的作業系統是 Windows，您可以下載 <a class="reference external" href="http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt//0.12.3/sbt.msi">MSI</a> 檔案並點兩下安裝。</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h3>1.2.2. Lift 專案目錄的架構<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>在 SBT 當中，一個專案就是一個檔案系統中的目錄，並且遵照特定的檔案與目錄節構，一個典型的 Lift 應用程式，會具有如下的目錄節構：</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">LiftProject                         // Lift 專案目錄</span>
+<span class="go">├── build.sbt                       // SBT 設定檔</span>
+<span class="go">├── project</span>
+<span class="go">│   └── plugins.sbt                 // SBT Plugin 設定檔</span>
+<span class="go">└── src</span>
+<span class="go">    └── main</span>
+<span class="go">        ├── scala</span>
+<span class="go">        │   ├── code                // 應用程式程式碼目錄</span>
+<span class="go">        │   │   ├── comet           // Lift Comet 程式碼</span>
+<span class="go">        │   │   ├── model           // Lift Model 程式碼</span>
+<span class="go">        │   │   ├── snippet         // Lift Snippet 程式碼</span>
+<span class="go">        │   │   └── view            // Lift View 程式碼</span>
+<span class="go">        │   └── bootstrap</span>
+<span class="go">        │       └── Boot.scala      // Lift 設定檔</span>
+<span class="go">        └── webapp                  // 網頁模版目錄</span>
+<span class="go">            ├── index.html          // 首頁</span>
+<span class="go">            └── WEB-INF             // Web Container 設定目錄</span>
+<span class="go">                └── web.xml</span>
+</pre></div>
+</div>
+<p>若您用過其他的 MVC 網頁框架，您可能會發現這樣的目錄編排和其他的網頁應用程式框架不太相同，例如在 Lift 的專案當中沒有 <tt class="docutils literal"><span class="pre">controller</span></tt> 這個目錄，但相反的多了 <tt class="docutils literal"><span class="pre">comet</span></tt> 和 <tt class="docutils literal"><span class="pre">snippet</span></tt> 這兩個目錄。</p>
+<p>另一點值得注意的，是在 Lift 專案中，我們的網頁模版會放在 <tt class="docutils literal"><span class="pre">src/main/webapp/</span></tt> 這個目錄底下，而 <tt class="docutils literal"><span class="pre">src/main/scala/code/view/</span></tt> 雖然也是放置 <tt class="docutils literal"><span class="pre">View</span></tt> 的程式碼，但這裡的 <tt class="docutils literal"><span class="pre">View</span></tt> 主要是指如 XML / JSON 這類直接使用程式碼產生的格式。</p>
+<p>在 <tt class="docutils literal"><span class="pre">src/main/scala/code/view/</span></tt> 裡的程式碼，就是負責透過程式化的方式生成 XML / JSON 回應，而我們的網頁模版是放在 <tt class="docutils literal"><span class="pre">src/main/webapp/</span></tt> 目錄當中。</p>
+<p>其他目錄的功用，我們會在使用到的時候再仔細說明，現在您只需要知道一個 Lift 專案的目錄的大致架構便已足夠。</p>
+</div>
+<div class="section" id="helloworld">
+<h3>1.2.3. 建立 HelloWorld 專案目錄<a class="headerlink" href="#helloworld" title="Permalink to this headline">¶</a></h3>
+<p>這一節我們會建立起一個最基本的，內含有 Jetty 網頁伺服器的 SBT 專案，並且將 Jetty 伺服器跑起來，確認我們至少有一個可以放置靜態網頁的網頁伺服器。</p>
+<p>一開始，我們先建立下列幾個目錄：</p>
+<blockquote>
+<div><ul class="simple">
+<li>HelloWorld</li>
+<li>HelloWorld/project</li>
+<li>HelloWorld/src/main/scala/code/snippet</li>
+<li>HelloWorld/src/main/scala/bootstrap</li>
+<li>HelloWorld/src/main/webapp</li>
+<li>HelloWorld/src/main/webapp/WEB-INF</li>
+</ul>
+</div></blockquote>
+<p>若您使用 Linux / MacOS 的話，可以直接在終端機視窗中使用下列的指令建立這個目錄：</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> mkdir -p HelloWorld/project
+<span class="gp">$</span> mkdir -p HelloWorld/src/main/code/snippet
+<span class="gp">$</span> mkdir -p HelloWorld/src/main/code/bootstrap
+<span class="gp">$</span> mkdir -p HelloWorld/src/main/webapp/WEB-INF
+</pre></div>
+</div>
+<p>若您使用的是 Windows 的話，請使用檔案管理員建立相對應的目錄。</p>
+<p>接著編輯 <tt class="docutils literal"><span class="pre">HelloWorld/project/plugins.sbt</span></tt> 這個檔案，將 <a class="reference external" href="https://github.com/JamesEarlDouglas/xsbt-web-plugin">SBT Web Plugin</a> 引入我們的專案中，如此一來我們才會有內建的 Jetty 伺服器做為程式開發時的 HTTP Server。</p>
+<p>該檔案的內容如下：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="c1">// HelloWorld/project/plugins.sbt</span>
+
+<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">&quot;com.github.siasia&quot;</span> <span class="o">%%</span> <span class="s">&quot;xsbt-web-plugin&quot;</span> <span class="o">%</span> <span class="s">&quot;0.12.0-0.2.11.1&quot;</span>
+</pre></div>
+</div>
+<p>最後我們要編輯 <tt class="docutils literal"><span class="pre">HelloWorld/build.sbt</span></tt> 這個檔案，設定此 Lift 專案的基本資訊：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">organization</span> <span class="o">:=</span> <span class="s">&quot;org.yourorg&quot;</span>   <span class="c1">// 你的專案的 organization 設定</span>
+
+<span class="n">name</span> <span class="o">:=</span> <span class="s">&quot;HelloWorld&quot;</span>            <span class="c1">// 專案名稱</span>
+
+<span class="n">version</span> <span class="o">:=</span> <span class="s">&quot;0.1-SNAPSHOT&quot;</span>       <span class="c1">// 專案版本</span>
+
+<span class="n">scalaVersion</span> <span class="o">:=</span> <span class="s">&quot;2.10.0&quot;</span>        <span class="c1">// 欲使用的 Scala 版本</span>
+
+<span class="n">seq</span><span class="o">(</span><span class="n">webSettings</span> <span class="k">:_</span><span class="kt">*</span><span class="o">)</span>            <span class="c1">// 使用預設的 SBT Web Plugin 設定</span>
+
+<span class="n">libraryDependencies</span> <span class="o">++=</span> <span class="nc">Seq</span><span class="o">(</span>    <span class="c1">// 引入 Jetty 伺服器至專案相依性中</span>
+  <span class="s">&quot;org.eclipse.jetty&quot;</span> <span class="o">%</span> <span class="s">&quot;jetty-webapp&quot;</span> <span class="o">%</span> <span class="s">&quot;8.1.7.v20120910&quot;</span>  <span class="o">%</span> <span class="s">&quot;container,test&quot;</span>
+<span class="o">)</span>
+</pre></div>
+</div>
+<p>編寫完上術設定檔後，我們可以使用下列的指令來進入 SBT 的命令列環境中：</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd </span>HelloWorld
+<span class="gp">$</span> sbt
+</pre></div>
+</div>
+<p>若一切正常無誤，您會看見類似下列的訊息，告知您 SBT 正在抓取所需要的檔案。第一次使用 SBT 時，此過程會花費較長的時間，請耐心等候。</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">brianhsu@USBGentoo ~/HelloWorld $ sbt</span>
+<span class="go">Getting net.java.dev.jna jna 3.2.3 ...</span>
+<span class="go">downloading http://repo1.maven.org/maven2/net/java/dev/jna/jna/3.2.3/jna-3.2.3.jar ...</span>
+<span class="go">        [SUCCESSFUL ] net.java.dev.jna#jna;3.2.3!jna.jar (12820ms)</span>
+<span class="go">:: retrieving :: org.scala-sbt#boot-jna</span>
+<span class="go">        confs: [default]</span>
+<span class="go">        1 artifacts copied, 0 already retrieved (838kB/22ms)</span>
+<span class="go">Getting org.scala-sbt sbt 0.12.3 ...</span>
+</pre></div>
+</div>
+<p>等到一切都完成後，SBT 會如下所示，出現 <tt class="docutils literal"><span class="pre">&gt;</span></tt> 的提示符號，告知您已經準備就緒，進入了 SBT 的建置環境，可以開始接受指令了。</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">[info]  [SUCCESSFUL ] org.eclipse.jetty#jetty-io;8.1.7.v20120910!jetty-io.jar (1746ms)</span>
+<span class="go">[info] Done updating.</span>
+<span class="gp">&gt;</span>
+</pre></div>
+</div>
+<p>出現這個訊息之後，請輸入 <tt class="docutils literal"><span class="pre">container:start</span></tt> 來將 Jetty 網頁伺服器啟動：</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span> container:start
+<span class="go">[info] jetty-8.1.7.v20120910</span>
+<span class="go">[info] NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet</span>
+<span class="go">[info] started o.e.j.w.WebAppContext{/,[file:/home/brianhsu/HelloWorld/src/main/webapp/]}</span>
+<span class="go">[info] started o.e.j.w.WebAppContext{/,[file:/home/brianhsu/HelloWorld/src/main/webapp/]}</span>
+<span class="go">[info] Started SelectChannelConnector@0.0.0.0:8080</span>
+<span class="go">[success] Total time: 0 s, completed 2013/4/24 下午 03:32:28</span>
+</pre></div>
+</div>
+<p>接著我們可以連線到 <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a> 此網址，會看到如下的畫面，這是由於我們沒有的 <tt class="docutils literal"><span class="pre">HelloWorld/src/main/webapp/</span></tt> 目錄仍然是空的，也沒有提供任何有效的網頁，因此 Jetty 預設會顯示出一個空的目錄列表。</p>
+<div class="figure align-center">
+<img alt="_images/01-01.png" src="_images/01-01.png" style="width: 800px;" />
+<p class="caption">預設的 Jetty 頁面</p>
+</div>
+<p>在 SBT 中除了可以使用 <tt class="docutils literal"><span class="pre">container:start</span></tt> 來啟動 Jetty 網頁伺服器外，也可以使用其他指令。以下是在這個 Tutorial 中我們會使用到的指令列表，以及其作用：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">指令</th>
+<th class="head">作用</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>compile</td>
+<td>編譯 Java / Scala 程式碼</td>
+</tr>
+<tr class="row-odd"><td>container:start</td>
+<td>啟動 Jetty 伺服器</td>
+</tr>
+<tr class="row-even"><td>container:stop</td>
+<td>停止 Jetty 伺服器</td>
+</tr>
+<tr class="row-odd"><td>container:reload /</td>
+<td>重新啟動 Jetty 伺服器</td>
+</tr>
+<tr class="row-even"><td>reload</td>
+<td>重新讀取 SBT 專案設定檔</td>
+</tr>
+<tr class="row-odd"><td>update</td>
+<td>重新抓取相依性函式庫套件</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>1.3. 建立第一個 Lift 專案<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>在這一節中，我們會把剛剛建立的專案目錄變成一個 Lift 專案，並且實作下述的功能：</p>
+<ul class="simple">
+<li>這個網站只有首頁</li>
+<li>當使用者進到網站時，會顯示招呼語與目前的時間</li>
+</ul>
+<div class="section" id="id5">
+<h3>1.3.1. 指定 Lift 的版本與專案相依性<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>在確認 Jetty 伺服器可以運作後，接下來我們要把 Lift 的函式庫加到我們的專案中，這個步驟相當簡單，請將 <tt class="docutils literal"><span class="pre">HelloWorld/build.sbt</span></tt> 中 <tt class="docutils literal"><span class="pre">libraryDependencies</span></tt> 設定相依性的部份修改成下面的程式碼：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">libraryDependencies</span> <span class="o">++=</span> <span class="nc">Seq</span><span class="o">(</span>    <span class="c1">// 引入 Jetty 伺服器至專案相依性中</span>
+  <span class="s">&quot;org.eclipse.jetty&quot;</span> <span class="o">%</span> <span class="s">&quot;jetty-webapp&quot;</span> <span class="o">%</span> <span class="s">&quot;8.1.7.v20120910&quot;</span>  <span class="o">%</span> <span class="s">&quot;container,test&quot;</span><span class="o">,</span>
+  <span class="s">&quot;net.liftweb&quot;</span> <span class="o">%%</span> <span class="s">&quot;lift-webkit&quot;</span> <span class="o">%</span> <span class="s">&quot;2.5-RC5&quot;</span> <span class="o">%</span> <span class="s">&quot;compile-&gt;default&quot;</span>
+<span class="o">)</span>
+</pre></div>
+</div>
+<p>並且在 SBT 的命令列中使用 <tt class="docutils literal"><span class="pre">reload</span></tt> 指令來更新我們的設定檔：</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span> reload
+<span class="go">[info] stopped o.e.j.w.WebAppContext{/,[file:/home/brianhsu/HelloWorld/src/main/webapp/]}</span>
+<span class="go">[info] Loading project definition from /home/brianhsu/HelloWorld/project</span>
+<span class="go">[info] Set current project to HelloWorld (in build file:/home/brianhsu/HelloWorld/)</span>
+<span class="go">[info] Updating {file:/home/brianhsu/HelloWorld/}default-3e77b3...</span>
+<span class="go">[info] Resolving org.eclipse.jetty#jetty-io;8.1.7.v20120910 ...</span>
+<span class="go">[info] downloading http://repo1.maven.org/maven2/net/liftweb/lift-webkit_2.10/2.5-RC5/lift-webkit_2.10-2.5-RC5.jar ...</span>
+<span class="go">[info]  [SUCCESSFUL ] net.liftweb#lift-webkit_2.10;2.5-RC5!lift-webkit_2.10.jar (90522ms)</span>
+<span class="go">[info] downloading http://repo1.maven.org/maven2/net/liftweb/lift-util_2.10/2.5-RC5/lift-util_2.10-2.5-RC5.jar ...</span>
+<span class="go">...</span>
+
+<span class="gp">&gt;</span>
+</pre></div>
+</div>
+<p>其中若沒有錯誤訊息出現，就代表我們已經把 Lift 的函式庫順利加入我們的專案中囉。</p>
+</div>
+<div class="section" id="web-inf">
+<h3>1.3.2. 編寫 WEB-INF/ 設定檔<a class="headerlink" href="#web-inf" title="Permalink to this headline">¶</a></h3>
+<p>由於 Lift 對於 <a class="reference external" href="http://en.wikipedia.org/wiki/Web_container">Java Web Container</a> 而言，只是單純的 Filter，所以我們必須要在 <tt class="docutils literal"><span class="pre">HelloWorld/src/main/webapp/WEB-INF/web.xml</span></tt> 當中進行設定，讓 Jetty 把所有的 HTTP Request 都重新導向給 Lift 進行處理。</p>
+<p>我們需要建立一個新的 <tt class="docutils literal"><span class="pre">HelloWorld/src/main/webapp/WEB-INF/web.xml</span></tt> 檔案，其內容如下：</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE web-app SYSTEM &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;</span>
+<span class="nt">&lt;web-app&gt;</span>
+  <span class="nt">&lt;filter&gt;</span>
+    <span class="nt">&lt;filter-name&gt;</span>LiftFilter<span class="nt">&lt;/filter-name&gt;</span>
+    <span class="nt">&lt;display-name&gt;</span>Lift Filter<span class="nt">&lt;/display-name&gt;</span>
+    <span class="nt">&lt;description&gt;</span>The Filter that intercepts Lift calls<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;filter-class&gt;</span>net.liftweb.http.LiftFilter<span class="nt">&lt;/filter-class&gt;</span>
+  <span class="nt">&lt;/filter&gt;</span>
+  <span class="nt">&lt;filter-mapping&gt;</span>
+    <span class="nt">&lt;filter-name&gt;</span>LiftFilter<span class="nt">&lt;/filter-name&gt;</span>
+    <span class="nt">&lt;url-pattern&gt;</span>/*<span class="nt">&lt;/url-pattern&gt;</span>
+  <span class="nt">&lt;/filter-mapping&gt;</span>
+<span class="nt">&lt;/web-app&gt;</span>
+</pre></div>
+</div>
+<p>接著我們使用下 <tt class="docutils literal"><span class="pre">container:stop</span></tt> 停止 Jetty 伺服器後，再使用 <tt class="docutils literal"><span class="pre">container:start</span></tt> 來重新啟動 Jetty 伺服器，讓接下來的 HTTP Request 會導到 Lift 進行處理。</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span> container:stop
+<span class="go">[success] Total time: 0 s, completed 2013/4/24 下午 05:00:12</span>
+<span class="gp">&gt;</span> container:start
+<span class="go">[info] jetty-8.1.7.v20120910</span>
+<span class="go">[info] NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet</span>
+<span class="go">[info] started o.e.j.w.WebAppContext{/,[file:/home/brianhsu/HelloWorld/src/main/webapp/]}</span>
+<span class="go">[info] started o.e.j.w.WebAppContext{/,[file:/home/brianhsu/HelloWorld/src/main/webapp/]}</span>
+<span class="go">SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.</span>
+<span class="go">SLF4J: Defaulting to no-operation (NOP) logger implementation</span>
+<span class="go">SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.</span>
+<span class="go">[info] Started SelectChannelConnector@0.0.0.0:8080</span>
+<span class="go">[success] Total time: 1 s, completed 2013/4/24 下午 05:00:15</span>
+<span class="gp">&gt;</span>
+</pre></div>
+</div>
+<p>現在若是重新連線到 <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a> 的話，應該會看到如下的畫面，代表我們已經成功地把使用者的 HTTP Request 導到 Lift 做處理了。</p>
+<div class="figure align-center">
+<img alt="_images/01-02.png" src="_images/01-02.png" style="width: 800px;" />
+<p class="caption">預設的 Lift 頁面</p>
+</div>
+<p>同樣的，會出現這個頁面這是因為我們目前還沒有加入任何的網頁，在這種情況下 Lift 會吐出 HTTP 404 的錯誤，並且告知沒有這個網頁。</p>
+</div>
+<div class="section" id="html">
+<h3>1.3.3. 編寫靜態 HTML 網頁<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
+<p>接下來我們要編寫 HTML 模版做為使用者進入網站時的首頁，與其他的 MVC 網頁框架不同，在 Lift 裡面你不需要定義使用者所輸入的 URL 路徑與 Controller 之前的對應，只需要把網頁加入到 <tt class="docutils literal"><span class="pre">HelloWorld/src/main/webapp</span></tt> 這個目錄當中即可。<a class="footnote-reference" href="#id10" id="id6">[1]</a></p>
+<p>與大多數的網頁伺服器相同，Lift 會把 <tt class="docutils literal"><span class="pre">index.html</span></tt> 做為首頁，因此我們只要新增並編輯 <tt class="docutils literal"><span class="pre">HelloWorld/src/main/webapp/index.html</span></tt> 這個檔案，其內容如下：</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span>
+<span class="cp">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello Lift<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div&gt;</span>Current Time is:<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>將這個檔案加入 <tt class="docutils literal"><span class="pre">webapp</span></tt> 目錄後，我們可以再次瀏覽 <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a> 這個網址，會看到如下的畫面，顯示出我們的新首頁：</p>
+<div class="figure align-center">
+<img alt="_images/01-03.png" src="_images/01-03.png" style="width: 800px;" />
+<p class="caption">新增的 HTML 靜態頁面</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>1.3.4. 將靜態首頁轉成<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>當然，如果我們的網頁單純只是靜態網頁，那不需要 Lift 也可。所以接下來我們要將原本的 <tt class="docutils literal"><span class="pre">index.html</span></tt> 進行擴充，讓他可以顯示出使用者瀏覽網頁時伺服器上的時間。</p>
+<p>與其他網頁框架所使用的模版系統相當不同，在 Lift 當中，模版是純脆的 xHTML / HTML5 網頁，沒有任何特殊的語法。對於 Lift 來說，模版是單純的資料，就像是字串或整數一樣。</p>
+<p>現在，我們將上述的模版做一些改動，變成如下的 xHTML 檔案：</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span>
+<span class="cp">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello Lift<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-lift=</span><span class="s">&quot;HelloWorld.currentTime&quot;</span><span class="nt">&gt;</span>Current Time is:<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>其中唯一的差別是我們在 <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt> 區塊上面加上了 <tt class="docutils literal"><span class="pre">data-lift=HelloWorld.currentTime</span></tt> 這個屬性，這代表了當 Lift 看到這個 <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt> 區塊的時候，會把整個區塊傳給 <tt class="docutils literal"><span class="pre">HelloWorld</span></tt> 這個類別裡的 <tt class="docutils literal"><span class="pre">currentTime</span></tt> 函式，並且用該函式返回的結果，取代原本的 <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt> 區塊。</p>
+<p>如你所見，在 Lift 裡面，我們並不是在模版裡利用特殊的語法來將程式的變數取代，而是把 xHTML / HTML 模版中的特定節點，傳入給某些函式做處理，再以函式回傳的節點取代原節點。這是 Lift 與其他 MVC 網頁應用程式框架相當不同的一點。</p>
+<div class="admonition note">
+<p class="first admonition-title">註解</p>
+<p class="last">在 Lift 中模版不能有任何 Scala 程式碼，模版只是單純的 xHTML / HTML5 資料。</p>
+</div>
+<p>如果我們現在連線到 <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a> 的話，會看到如下的畫面，Lift 出現錯誤訊息，告知我們他找不到 HelloWorld 這個類別，以及造成這個錯誤的 xHTML 節點。</p>
+<div class="figure align-center">
+<img alt="_images/01-04.png" src="_images/01-04.png" style="width: 800px;" />
+<p class="caption">模版有錯誤而出現警告訊息</p>
+</div>
+</div>
+<div class="section" id="helloworld-snippet">
+<h3>1.3.5. 編寫 HelloWorld Snippet<a class="headerlink" href="#helloworld-snippet" title="Permalink to this headline">¶</a></h3>
+<p>接下來，我們要實作 <tt class="docutils literal"><span class="pre">HelloWorld</span></tt> 這個類別，以及 <tt class="docutils literal"><span class="pre">currentTime</span></tt> 這個函式，好讓上述的模版可以正確地呼叫這個函式。</p>
+<p>我們編輯 <tt class="docutils literal"><span class="pre">HelloWorld/src/main/scala/code/snippet/HelloWorld.scala</span></tt> 這個檔案，其內容如下：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">package</span> <span class="nn">org.code.snippet</span>
+
+<span class="k">import</span> <span class="nn">scala.xml.NodeSeq</span>
+<span class="k">import</span> <span class="nn">java.util.Date</span>
+
+<span class="k">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+
+  <span class="k">def</span> <span class="n">currentTime</span><span class="o">(</span><span class="n">xhtml</span><span class="k">:</span> <span class="kt">NodeSeq</span><span class="o">)</span><span class="k">:</span> <span class="kt">NodeSeq</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">xhtml</span> <span class="o">++</span> <span class="o">&lt;</span><span class="n">span</span><span class="o">&gt;{(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">).</span><span class="n">toString</span><span class="o">}&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>如你所見，這個 <tt class="docutils literal"><span class="pre">HelloWorld</span></tt> 類別相當簡單，<tt class="docutils literal"><span class="pre">currentTime</span></tt> 是一個接受 <tt class="docutils literal"><span class="pre">NodeSeq</span></tt> 物件並返回一個 <tt class="docutils literal"><span class="pre">NodeSeq</span></tt> 物件的函式，而他做的事情是把傳入的 <tt class="docutils literal"><span class="pre">xhtml</span></tt> 節點，再加上一個新的，內含有現在時間的 <tt class="docutils literal"><span class="pre">&lt;span&gt;</span></tt> 節點後回傳。</p>
+<p>回到上述的 <tt class="docutils literal"><span class="pre">index.html</span></tt> 模版，我們知道當 Lift 的模版系統看到 <tt class="docutils literal"><span class="pre">&lt;div</span> <span class="pre">data-lift=&quot;HelloWorld.currentTime&quot;&gt;Current</span> <span class="pre">Time</span> <span class="pre">is:&lt;/div&gt;</span></tt> 區塊時，會把 <tt class="docutils literal"><span class="pre">&lt;div&gt;Current</span> <span class="pre">Time</span> <span class="pre">is:&lt;/div&gt;</span></tt> 傳到 <tt class="docutils literal"><span class="pre">currentTime</span></tt> 函式中，並且用 <tt class="docutils literal"><span class="pre">currentTime</span></tt> 回傳的新節點來取代原本的 <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt> 節點。</p>
+<p>由於這個原因，我們可以預期經過模版系統的處理後，我們會得到如下的 xHTML 內容：</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span>
+<span class="cp">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello Lift<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div&gt;</span>Current Time is:<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;span&gt;</span>Thu Apr 25 11:31:12 CST 2013<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bootstrap">
+<h3>1.3.6. 編寫 Bootstrap 設定檔<a class="headerlink" href="#bootstrap" title="Permalink to this headline">¶</a></h3>
+<p>但只有 HelloWorld 這個類別是不夠的，我們要告訴 Lift 當他在模版系統中看到 <tt class="docutils literal"><span class="pre">data-lift=&quot;HelloWorld.currentTime&quot;</span></tt> 這個屬性時，要到哪裡去找 HelloWorld 這個類別。</p>
+<p>要達成這件事，我們要新增並編輯一個 <tt class="docutils literal"><span class="pre">bootstrap.liftweb.Boot</span></tt> 類別，並且透過 <tt class="docutils literal"><span class="pre">LiftRules.addToPackages</span></tt> 來告訴 Lift 當他在模版中需要找 Snippet 的時候，會去 <tt class="docutils literal"><span class="pre">org.code.snippet</span></tt> 這個 package 中搜尋。</p>
+<p>現在我們新增並編輯 <tt class="docutils literal"><span class="pre">HelloWorld/src/main/scala/bootstrap/Boot.scala</span></tt> 這個檔案：</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">package</span> <span class="nn">bootstrap.liftweb</span>
+
+<span class="k">import</span> <span class="nn">net.liftweb.http.LiftRules</span>
+
+<span class="k">class</span> <span class="nc">Boot</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">boot</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="nc">LiftRules</span><span class="o">.</span><span class="n">addToPackages</span><span class="o">(</span><span class="s">&quot;org.code&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>要注意的是，在 <tt class="docutils literal"><span class="pre">LiftRules.addToPackages</span></tt> 中我們只指定到 <tt class="docutils literal"><span class="pre">org.code</span></tt> 這個層級，這是因為 Lift 在其他地方亦會用到這個參數，並且依照特定的命名規則找尋其 sub-package，所以我們只需要指定到 <tt class="docutils literal"><span class="pre">org.code.snippet</span></tt> 的上一層即可。</p>
+</div>
+<div class="section" id="id8">
+<h3>1.3.7. 執行 Lift 應用程式<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>現在我們要對 <tt class="docutils literal"><span class="pre">Boot.scala</span></tt> 和 <tt class="docutils literal"><span class="pre">HelloWorld.scala</span></tt> 進行編譯，請在 SBT 建置環境中輸入 <tt class="docutils literal"><span class="pre">compile</span></tt> 指令，進行編譯。</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span> compile
+<span class="go">[info] Compiling 2 Scala sources to /home/brianhsu/HelloWorld/target/scala-2.10/classes...</span>
+<span class="go">[success] Total time: 8 s, completed 2013/4/25 上午 11:51:32</span>
+</pre></div>
+</div>
+<p>最後再使用 <tt class="docutils literal"><span class="pre">container:reload</span> <span class="pre">/</span></tt> 來重新啟動 Jetty 和 Lift：</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span> container:reload /
+<span class="go">[info] stopped o.e.j.w.WebAppContext{/,[file:/home/brianhsu/HelloWorld/src/main/webapp/]}</span>
+<span class="go">[info] NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet</span>
+<span class="go">[info] started o.e.j.w.WebAppContext{/,[file:/home/brianhsu/HelloWorld/src/main/webapp/]}</span>
+<span class="go">[info] started o.e.j.w.WebAppContext{/,[file:/home/brianhsu/HelloWorld/src/main/webapp/]}</span>
+<span class="go">SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.</span>
+<span class="go">SLF4J: Defaulting to no-operation (NOP) logger implementation</span>
+<span class="go">SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.</span>
+<span class="go">[success] Total time: 0 s, completed 2013/4/25 上午 11:52:40</span>
+</pre></div>
+</div>
+<p>現在若是連線到 <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a> 的話，就會看到原先的錯誤訊息已經消失，取而代之的是原本的 <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt> 區塊下，多了現在的時間，若是重新讀取頁面的話，該時間也會隨之更新。</p>
+<div class="figure align-center">
+<img alt="_images/01-05.png" src="_images/01-05.png" style="width: 800px;" />
+<p class="caption">顯示現在時間的網頁</p>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>1.4. 結論<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>在這一章中，我們看到了如何從無到有建立起一個最基本的 Lift 動態網頁，也看到了如何利用 Lift 的 HTML 模版系統與 Snippet 將動態內容注入到只有純 xHTML 的網頁模版中。</p>
+<p>在下一章，我們會詳細看 Lift 的模版與 Snippet 系統。</p>
+<p class="rubric">註腳</p>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[1]</a></td><td>事實上 Lift 提供了叫做 SiteMap 的機制，讓你可以設定哪些路徑是有效的，以防止意外存取到網頁應用程式內部使用的資源，但是否要使用 SiteMap 你可以自行決定。</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">內容目錄</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. 從零開始建立第一個 Lift 程式</a><ul>
+<li><a class="reference internal" href="#id1">1.1. 前置需求</a></li>
+<li><a class="reference internal" href="#sbt">1.2. 安裝 SBT 與建立基本專案目錄</a><ul>
+<li><a class="reference internal" href="#id2">1.2.1. 安裝 SBT 建置系統</a></li>
+<li><a class="reference internal" href="#id3">1.2.2. Lift 專案目錄的架構</a></li>
+<li><a class="reference internal" href="#helloworld">1.2.3. 建立 HelloWorld 專案目錄</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">1.3. 建立第一個 Lift 專案</a><ul>
+<li><a class="reference internal" href="#id5">1.3.1. 指定 Lift 的版本與專案相依性</a></li>
+<li><a class="reference internal" href="#web-inf">1.3.2. 編寫 WEB-INF/ 設定檔</a></li>
+<li><a class="reference internal" href="#html">1.3.3. 編寫靜態 HTML 網頁</a></li>
+<li><a class="reference internal" href="#id7">1.3.4. 將靜態首頁轉成</a></li>
+<li><a class="reference internal" href="#helloworld-snippet">1.3.5. 編寫 HelloWorld Snippet</a></li>
+<li><a class="reference internal" href="#bootstrap">1.3.6. 編寫 Bootstrap 設定檔</a></li>
+<li><a class="reference internal" href="#id8">1.3.7. 執行 Lift 應用程式</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">1.4. 結論</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一個主題</h4>
+  <p class="topless"><a href="BeforeStart.html"
+                        title="上一章">開始之前</a></p>
+  <h4>下一個主題</h4>
+  <p class="topless"><a href="BasicLiftTemplate.html"
+                        title="下一章">2. Lift 模版系統基礎</a></p>
+  <h3>本頁</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/FirstLiftApp.txt"
+           rel="nofollow">顯示原始碼</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>快速搜尋</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>瀏覽</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="總索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="BasicLiftTemplate.html" title="2. Lift 模版系統基礎"
+             >下一頁</a> |</li>
+        <li class="right" >
+          <a href="BeforeStart.html" title="開始之前"
+             >上一頁</a> |</li>
+        <li><a href="index.html">Lift Tutorial</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright Brian Hsu, 2013.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="Settings">
+
+    <PreferenceCategory android:title="@string/prefs_maid_category">
+        <ListPreference android:title="@string/prefs_maid_list"
+                        android:key="maid"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_voice_category">
+        <CheckBoxPreference android:title="@string/prefs_voice_checkbox" 
+                            android:summary="@string/prefs_voice_summary"
+                            android:key="voiceOn"
+                            android:defaultValue="true"/>
+
+        <org.maidroid.reminder.VolumePreference 
+                          android:title="@string/prefs_voice_volume"
+                          android:summary="@string/prefs_voice_volume_summary"
+                          android:dependency="voiceOn"
+                          android:key="volume"
+                          android:dialogTitle="@string/prefs_voice_volume"
+                          android:negativeButtonText="@string/add_cancel"
+                          android:positiveButtonText="@string/add_ok"
+                          android:widgetLayout="@layout/volume_widget_layout"
+                          android:dialogLayout="@layout/volume_preference"/>
+
+        <CheckBoxPreference android:title="@string/prefs_ignore_silent" 
+                            android:summary="@string/prefs_ignore_summary"
+                            android:dependency="voiceOn"
+                            android:key="ignoreSilent"
+                            android:defaultValue="false"/>
+
+        <CheckBoxPreference android:title="@string/prefs_long_toast" 
+                            android:summary="@string/prefs_long_toast_summary"
+                            android:key="longToast"
+                            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_event_notification">
+
+        <CheckBoxPreference android:title="@string/prefs_use_system_notification" 
+                            android:summary="@string/prefs_use_system_notification_summary"
+                            android:key="systemNotificationSound"
+                            android:defaultValue="false"/>
+
+        <CheckBoxPreference android:title="@string/prefs_notification_loop" 
+                            android:summary="@string/prefs_notification_loop_summary"
+                            android:key="loopNotification"
+                            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
